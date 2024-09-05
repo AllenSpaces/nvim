@@ -1,6 +1,6 @@
 # Nvim Config
 
-# Nvim Configuration Directory Structure
+## Nvim Configuration Directory Structure
 
 ```zsh
 .

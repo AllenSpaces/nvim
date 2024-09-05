@@ -33,7 +33,7 @@ function M.Config()
 			winlend = 0,
 		},
 		autochdir = true,
-		shell = "powershell",
+		shell = "/bin/zsh",
 	})
 end
 

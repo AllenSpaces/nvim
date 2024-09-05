@@ -45,7 +45,7 @@ function M.Config()
 			},
 		},
 		renderer = {
-			special_files = { "README.md", "Makefile" },
+			special_files = {},
 			icons = {
 				glyphs = {
 					default = "󱧶",

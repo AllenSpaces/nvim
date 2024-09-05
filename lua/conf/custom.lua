@@ -8,7 +8,7 @@ function M.Config()
 		{ type = "global", method = "db_ui_show_help", value = 0 },
 		{ type = "global", method = "termguicolors", value = true },
 		{ type = "option", method = "mouse", value = "" },
-		{ type = "option", method = "relativenumber", value = true },
+		{ type = "option", method = "relativenumber", value = false },
 		{ type = "option", method = "number", value = true },
 		{ type = "option", method = "numberwidth", value = 4 },
 		{ type = "option", method = "autoindent", value = true },
@@ -31,7 +31,7 @@ function M.Config()
 		{ type = "option", method = "pumwidth", value = 10 },
 		{ type = "option", method = "autoread", value = true },
 		{ type = "option", method = "showmode", value = false },
-		{ type = "colors", method = "colorscheme", value = "catppuccin-frappe" },
+		{ type = "option", method = "winblend", value = 0 },
 	}
 
 	for _, item in ipairs(custom) do
@@ -39,8 +39,6 @@ function M.Config()
 			vim.g[item.method] = item.value
 		elseif item.type == "option" then
 			vim.opt[item.method] = item.value
-		elseif item.type == "colors" then
-			vim.cmd(string.format("%s %s", item.method, item.value))
 		end
 	end
 end

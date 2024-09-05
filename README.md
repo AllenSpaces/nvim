@@ -54,9 +54,7 @@
 │           ├── nvim-tree.lua
 │           ├── telescope.lua
 │           ├── transparent.lua
-│           └── tree-sitter.lua
-└── plugin
-    └── packer_compiled.lua
+└──         └── tree-sitter.lua
 ```
 
 ##

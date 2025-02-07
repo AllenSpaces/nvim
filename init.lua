@@ -21,7 +21,6 @@ local modules = {
 }
 
 for _, util in ipairs(modules) do
-	print("1")
 	if util.enabled then
 		require(util.moduleName).Config()
 	end

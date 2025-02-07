@@ -1,27 +1,26 @@
 local M = {}
 
 function M.TypeScriptLSP()
-	require("lspconfig").tsserver.setup({
+	require("lspconfig").ts_ls.setup({
 		init_options = {
 			plugins = {
-				-- Windows
 				{
 					name = "@vue/typescript-plugin",
 					location = vim.fn.stdpath("data")
-						.. "\\mason\\packages\\vue-language-server\\node_modules\\@vue\\language-server",
-					languages = { "vue" },
+						.. "/mason/packages/vue-language-server/node_modules/@vue/language-server",
+					languages = { "javascript", "typescript", "vue" },
 				},
-
-				-- MacOs
-				-- {
-				-- 	name = "@vue/typescript-plugin",
-				-- 	location = vim.fn.stdpath("data")
-				-- 		.. "/mason/packages/vue-language-server/node_modules/@vue/language-server",
-				-- 	languages = { "vue" },
-				-- },
 			},
 		},
-		filetypes = { "javascript", "typescript", "javascriptreact", "typescriptreact", "vue" },
+		filetypes = {
+			"javascript",
+			"typescript",
+			"javascriptreact",
+			"typescriptreact",
+			"vue",
+			"javascript.jsx",
+			"typescript.tsx",
+		},
 	})
 end
 

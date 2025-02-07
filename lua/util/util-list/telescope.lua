@@ -21,18 +21,7 @@ function M.Config()
 				"__pycache__",
 				"%.log",
 			},
-			extensions = {
-				import = {
-					insert_at_top = true,
-					custom_languages = {
-						{
-							regex = [[^(?:import(?:[\"'\s]*([\w*{}\n, ]+)from\s*)?[\"'\s](.*?)[\"'\s].*)]],
-							filetypes = { "typescript", "typescriptreact", "javascript", "react", "python" },
-							extensions = { "js", "ts" },
-						},
-					},
-				},
-			},
+			extensions = {},
 			sorting_strategy = "ascending",
 		},
 	})

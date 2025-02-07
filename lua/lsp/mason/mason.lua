@@ -31,6 +31,7 @@ function M.Config()
 	require("lsp.mason.conf.typescript_conf").TypeScriptLSP()
 	require("lsp.mason.conf.java_conf").JavaLSP()
 	require("lsp.mason.conf.go_conf").GoLSP()
+	require("lsp.mason.conf.dart_conf").DartLSP()
 end
 
 return M

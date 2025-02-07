@@ -9,13 +9,6 @@ function M.Config()
 			enable = true,
 			msg = "",
 		},
-		{
-			mode = { "BufNewFile", "BufEnter" },
-			pattern = { "*" },
-			command = "silent! Tundra toggle_transparency",
-			enable = true,
-			msg = "",
-		},
 	}
 	for _, cmd in ipairs(commands) do
 		if cmd.enable then

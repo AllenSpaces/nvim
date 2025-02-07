@@ -26,6 +26,7 @@ function M.Config()
 			},
 			exclude = {
 				".gitignore",
+				".env",
 			},
 			dotfiles = true,
 		},

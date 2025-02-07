@@ -56,8 +56,9 @@ function M.Config()
 		mod = { icon = "󰕏", color = "#ffc0b6", name = "Mod" },
 		so = { icon = "", color = "#dae0ff", name = "So" },
 		http = { icon = "󰭄", color = "#ffc0b6", name = "Http" },
+		dart = { icon = "", color = "#ffc0b6", name = "Dart" },
 		["tsconfig.json"] = { icon = "", color = "#ffc0b6", name = "TsConfig" },
-		[".env"] = { icon = "", color = "#dae0ff", name = "Env" },
+		[".env"] = { icon = "", color = "#f8e2ef", name = "Env" },
 		["favicon.ico"] = { icon = "󱞈", color = "#c0fbfd", name = "Favicon" },
 		["init.lua"] = { icon = "", color = "#c0fbfd", name = "Init" },
 		["package.json"] = { icon = "", color = "#c0fbfd", name = "Package" },
@@ -69,6 +70,8 @@ function M.Config()
 		["LICENSE"] = { icon = "", color = "#dae0ff", name = "LICENSE" },
 		[".gitignore"] = { icon = "", color = "#ffc0b6", name = "GitIgnore" },
 		[".zshrc"] = { icon = "󰬡", color = "#e9fdfe", name = "Zshrc" },
+		["_layout.tsx"] = { icon = "󰬓", color = "#fdf0db", name = "Layout" },
+		["server.js"] = { icon = "󰇄", color = "#dae0ff", name = "Server" },
 	})
 end
 

@@ -6,14 +6,14 @@ function M.PythonLSP()
 			pylsp = {
 				plugins = {
 					pycodestyle = {
-						ignore = { "W391" },
+						ignore = { "W391", "W503" },
 						maxLineLength = 200,
 					},
 					jedi_completion = {
 						eager = true,
 					},
 					pylint = {
-						enabled = true,
+						enabled = false,
 					},
 				},
 			},

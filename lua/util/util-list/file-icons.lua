@@ -57,6 +57,7 @@ function M.Config()
 		so = { icon = "", color = "#dae0ff", name = "So" },
 		http = { icon = "󰭄", color = "#ffc0b6", name = "Http" },
 		dart = { icon = "", color = "#ffc0b6", name = "Dart" },
+		toml = { icon = "󰰥", color = "#ffd3aa", name = "toml" },
 		["tsconfig.json"] = { icon = "", color = "#ffc0b6", name = "TsConfig" },
 		[".env"] = { icon = "", color = "#f8e2ef", name = "Env" },
 		["favicon.ico"] = { icon = "󱞈", color = "#c0fbfd", name = "Favicon" },

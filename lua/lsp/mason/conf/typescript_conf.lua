@@ -8,7 +8,7 @@ function M.TypeScriptLSP()
 					name = "@vue/typescript-plugin",
 					location = vim.fn.stdpath("data")
 						.. "/mason/packages/vue-language-server/node_modules/@vue/language-server",
-					languages = { "javascript", "typescript", "vue" },
+					languages = { "javascript", "typescript" },
 				},
 			},
 		},
@@ -17,9 +17,6 @@ function M.TypeScriptLSP()
 			"typescript",
 			"javascriptreact",
 			"typescriptreact",
-			"vue",
-			"javascript.jsx",
-			"typescript.tsx",
 		},
 	})
 end

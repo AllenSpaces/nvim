@@ -1,8 +1,8 @@
 local M = {}
 local status, ntree = pcall(require, "nvim-tree")
 
-local screen_width = vim.api.nvim_get_option("columns")
-local screen_height = vim.api.nvim_get_option("lines")
+local screen_width = vim.opt.columns:get()
+local screen_height = vim.opt.lines:get()
 
 local float_width = math.floor(vim.api.nvim_win_get_width(0) / 1.5)
 local float_height = math.floor(vim.api.nvim_win_get_height(0) / 1.5)

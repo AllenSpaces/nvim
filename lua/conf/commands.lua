@@ -9,6 +9,13 @@ function M.Config()
 			enable = true,
 			msg = "",
 		},
+		{
+			mode = { "BufWritePost" },
+			pattern = { "*" },
+			command = "source %",
+			enable = true,
+			msg = "",
+		},
 	}
 	for _, cmd in ipairs(commands) do
 		if cmd.enable then

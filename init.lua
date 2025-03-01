@@ -2,7 +2,6 @@ local modules = {
 	{ moduleName = "conf.commands", enabled = true },
 	{ moduleName = "conf.keymaps", enabled = true },
 	{ moduleName = "conf.custom", enabled = true },
-	{ moduleName = "util.util-installer", enabled = true },
 	{ moduleName = "util.util-list.file-icons", enabled = true },
 	{ moduleName = "util.util-list.nvim-tree", enabled = true },
 	{ moduleName = "util.util-list.tree-sitter", enabled = true },
@@ -18,11 +17,12 @@ local modules = {
 	{ moduleName = "lsp.mason.mason", enabled = true },
 	{ moduleName = "lsp.lsp", enabled = true },
 	{ moduleName = "lsp.snips.snips", enabled = true },
+	{ moduleName = "util.super-installer", enabled = true },
 }
 
 for _, util in ipairs(modules) do
 	if util.enabled then
 		require(util.moduleName).Config()
 	end
-	vim.cmd([[colorscheme catppuccin-frappe]])
+	vim.cmd.colorscheme("catppuccin-frappe")
 end

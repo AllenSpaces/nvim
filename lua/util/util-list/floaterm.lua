@@ -7,17 +7,17 @@ if not status then
 	return false
 end
 
-function Node()
+function _Node()
 	local node = Terminal:new({ cmd = "node", hidden = true })
 	node:toggle()
 end
 
-function Python()
+function _Python()
 	local python = Terminal:new({ cmd = "python3", hidden = true })
 	python:toggle()
 end
 
-function Lua()
+function _Lua()
 	local lua = Terminal:new({ cmd = "lua", hidden = true })
 	lua:toggle()
 end

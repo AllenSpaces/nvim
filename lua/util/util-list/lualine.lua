@@ -10,11 +10,11 @@ function M.Config()
 	lul.setup({
 		options = {
 			icons_enabled = true,
-			theme = "catppuccin",
-			-- component_separators = { left = " ", right = " " },
-			-- section_separators = { left = "  ", right = "  " },
-			section_separators = { left = "", right = "" },
-			component_separators = { left = "", right = "" },
+			theme = "miracle-of-god",
+			component_separators = { left = " ", right = " " },
+			section_separators = { left = "  ", right = "  " },
+			-- section_separators = { left = "", right = "" },
+			-- component_separators = { left = "", right = "" },
 			always_divide_middle = true,
 			globalstatus = true,
 			refresh = {

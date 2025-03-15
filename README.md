@@ -27,7 +27,6 @@
 │   │   │   │   ├── lua_conf.lua
 │   │   │   │   ├── python_conf.lua
 │   │   │   │   ├── typescript_conf.lua
-│   │   │   │   └── vue_conf.lua
 │   │   │   └── mason.lua
 │   │   └── snips
 │   │       ├── conf
@@ -38,7 +37,6 @@
 │   │       │   ├── python_snip.lua
 │   │       │   ├── react_snip.lua
 │   │       │   ├── typescript_snip.lua
-│   │       │   └── vue_snip.lua
 │   │       └── snips.lua
 │   └── util
 │       ├── util-installer.lua

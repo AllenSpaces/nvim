@@ -8,7 +8,7 @@ end
 
 function M.Config()
 	super.setup({
-		git = "https",
+		git = "git",
 		install = {
 			use = {
 				-- float terminal
@@ -35,7 +35,7 @@ function M.Config()
 				"nvim-tree/nvim-tree.lua",
 
 				-- color scheme
-				"catppuccin/nvim",
+				"wukuohao2003/miracle-of-god.git",
 
 				-- icons
 				"nvim-tree/nvim-web-devicons",

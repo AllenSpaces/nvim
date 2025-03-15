@@ -1,14 +1,23 @@
 local M = {}
-local status, noice = pcall(require, "noice")
+local status_noice, noice = pcall(require, "noice")
+local statis_notify, notify = pcall(require, "notify")
 
-if not status then
+if not status_noice then
 	vim.notify("noice is not found")
-	return
+	return false
+end
+
+if not statis_notify then
+	vim.notify("notify is not found")
+	return false
 end
 
 function M.Config()
-	require("notify").setup({
+	notify.setup({
 		background_colour = "#000000",
+		stages = "slide",
+		timeout = 1000,
+		render = "simple",
 	})
 
 	noice.setup({

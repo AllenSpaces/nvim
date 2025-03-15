@@ -18,6 +18,35 @@ function M.Config()
 		{ mode = "n", key = "<leader>nh", map = ":set nohlsearch<CR>", enabled = true },
 		{ mode = "n", key = "<leader>ms", map = ":Mason<CR>", enabled = true },
 		{ mode = "n", key = "<leader>db", map = ":DBUI<CR>", enabled = true },
+		{ mode = "n", key = "<leader>b", map = "<C-o>", enabled = true },
+		{
+			mode = "n",
+			key = "gd",
+			map = "<cmd>lua vim.lsp.buf.definition()<CR>",
+			enabled = true,
+			opt,
+		},
+		{
+			mode = "n",
+			key = "gD",
+			map = "<cmd>lua vim.lsp.buf.declaration()<CR>",
+			enabled = true,
+			opt,
+		},
+		{
+			mode = "n",
+			key = "gi",
+			map = "<cmd>lua vim.lsp.buf.implementation()<CR>",
+			enabled = true,
+			opt,
+		},
+		{
+			mode = "n",
+			key = "gt",
+			map = "<cmd>lua vim.lsp.buf.type_definition()<CR>",
+			enabled = true,
+			opt,
+		},
 	}
 
 	for _, map in ipairs(mappings) do

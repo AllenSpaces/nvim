@@ -1,21 +1,31 @@
 local M = {}
 
 function M.EmmetLSP()
-	require("lspconfig").emmet_language_server.setup({
-		cmd = { "emmet-language-server", "--stdio" },
+	local capabilities = vim.lsp.protocol.make_client_capabilities()
+	capabilities.textDocument.completion.completionItem.snippetSupport = true
+
+	require("lspconfig").emmet_ls.setup({
+		capabilities = capabilities,
 		filetypes = {
 			"css",
 			"eruby",
 			"html",
-			"htmldjango",
+			"javascript",
 			"javascriptreact",
 			"less",
-			"pug",
 			"sass",
 			"scss",
+			"svelte",
+			"pug",
 			"typescriptreact",
-			"htmlangular",
 			"vue",
+		},
+		init_options = {
+			html = {
+				options = {
+					["bem.enabled"] = true,
+				},
+			},
 		},
 	})
 end

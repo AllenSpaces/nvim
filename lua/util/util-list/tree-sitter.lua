@@ -42,7 +42,6 @@ function M.Config()
 			enable_rename = true,
 			enable_close = true,
 			enable_close_on_slash = true,
-			-- 支持语言
 			filetypes = {
 				"html",
 				"javascript",
@@ -54,7 +53,6 @@ function M.Config()
 				"vue",
 				"markdown",
 			},
-			-- 单标签不触发
 			skip_tags = {
 				"area",
 				"base",

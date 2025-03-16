@@ -35,7 +35,7 @@ function M.Config()
 				"nvim-tree/nvim-tree.lua",
 
 				-- color scheme
-				"wukuohao2003/miracle-of-god.git",
+				"wukuohao2003/miracle-of-god",
 
 				-- icons
 				"nvim-tree/nvim-web-devicons",

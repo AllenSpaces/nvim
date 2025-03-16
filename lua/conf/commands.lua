@@ -16,7 +16,9 @@ function M.Config()
 				pattern = cmd.pattern,
 				callback = function()
 					vim.fn.execute(cmd.command)
-					vim.notify(cmd.msg)
+					if cmd.msg then
+						vim.notify(cmd.msg)
+					end
 				end,
 				nested = true,
 			})

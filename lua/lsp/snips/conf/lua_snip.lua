@@ -22,18 +22,5 @@ return {
 				}
 			)
 		),
-		ls.snippet(
-			"use",
-			fmt(
-				[[
-        use({{
-          "{}"
-        }})
-      ]],
-				{
-					ls.insert_node(1),
-				}
-			)
-		),
 	}),
 }

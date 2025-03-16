@@ -2,7 +2,8 @@ local M = {}
 local status, icons = pcall(require, "nvim-web-devicons")
 
 if not status then
-	vim.notify("icon is not found ...")
+	require("notify")("icon is not found ...", "error", { title = "nvim" })
+
 	return false
 end
 

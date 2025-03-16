@@ -2,7 +2,8 @@ local status, mason = pcall(require, "mason")
 local M = {}
 
 if not status then
-	vim.notify("mason is not found ...")
+	require("notify")("mason is not found ...", "error", { title = "nvim" })
+
 	return false
 end
 

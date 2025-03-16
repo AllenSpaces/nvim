@@ -2,7 +2,8 @@ local status, lul = pcall(require, "lualine")
 local M = {}
 
 if not status then
-	vim.notify("lualine is not found ...")
+	require("notify")("lualine is not found ...", "error", { title = "nvim" })
+
 	return false
 end
 
@@ -13,8 +14,6 @@ function M.Config()
 			theme = "miracle-of-god",
 			component_separators = { left = " ", right = " " },
 			section_separators = { left = "  ", right = "  " },
-			-- section_separators = { left = "", right = "" },
-			-- component_separators = { left = "", right = "" },
 			always_divide_middle = true,
 			globalstatus = true,
 			refresh = {
@@ -36,6 +35,15 @@ function M.Config()
 			lualine_b = {
 				"branch",
 				"diff",
+				{
+					"filename",
+					path = 0,
+					file_status = false,
+					newfile_status = false,
+					symbols = {
+						unnamed = "",
+					},
+				},
 				{
 					"filetype",
 					icon = { align = "left" },
@@ -67,17 +75,17 @@ function M.Config()
 					update_in_insert = true,
 					always_visible = true,
 				},
-			},
-			lualine_y = {
 				{
 					"lsp-status",
 					show_count = false,
-					disabled_filetypes = { "NvimTree", "TelescopePrompt", "toggleterm" },
+					disabled_filetypes = { "NvimTree", "TelescopePrompt", "toggleterm", "" },
 					icons = {
 						inactive = "󰌙",
 					},
 				},
-				{ "datetime", style = "%m/%d/%Y %H:%M:%S" },
+			},
+			lualine_y = {
+				{ "datetime", style = "%Y˚%m˚%d | %H:%M:%S" },
 			},
 			lualine_z = {},
 		},

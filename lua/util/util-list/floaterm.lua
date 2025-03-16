@@ -3,7 +3,8 @@ local Terminal = require("toggleterm.terminal").Terminal
 local M = {}
 
 if not status then
-	vim.notify("Floaterm is not Found ...")
+	require("notify")("Floaterm is not Found ...", "error", { title = "nvim" })
+
 	return false
 end
 

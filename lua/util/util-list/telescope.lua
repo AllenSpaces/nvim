@@ -2,13 +2,20 @@ local status, telescope = pcall(require, "telescope")
 local M = {}
 
 if not status then
-	vim.notify("telescope is not found ...")
+	require("notify")("telescope is not found ...", "error", { title = "nvim" })
+
 	return false
 end
 
 function M.Config()
 	telescope.setup({
 		defaults = {
+			preview = false,
+			layout_config = {
+				width = 0.5,
+				height = 0.6,
+				prompt_position = "top",
+			},
 			history = false,
 			path_display = {
 				"tail",

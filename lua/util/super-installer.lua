@@ -2,7 +2,8 @@ local status, super = pcall(require, "super-installer")
 local M = {}
 
 if not status then
-	vim.notify("Super-Installer is not found...")
+	require("notify")("Super-Installer is not found...", "error", { title = "nvim" })
+
 	return
 end
 

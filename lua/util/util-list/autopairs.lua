@@ -2,7 +2,8 @@ local M = {}
 local status, atpairs = pcall(require, "nvim-autopairs")
 
 if not status then
-	vim.notify("auto-pairs is not found ...")
+	require("notify")("auto-pairs is not found ...", "error", { title = "nvim" })
+
 	return false
 end
 

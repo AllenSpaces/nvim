@@ -2,7 +2,8 @@ local M = {}
 local status, _ = pcall(require, "luasnip")
 
 if not status then
-	vim.notify("luasnip is not found ...")
+	require("notify")("luasnip is not found ...", "error", { title = "vim" })
+
 	return false
 end
 

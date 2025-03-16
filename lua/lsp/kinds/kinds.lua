@@ -1,8 +1,8 @@
 local M = {}
 
 M.kinds = {
-	Text = "󱄽  ",
-	Class = "  ",
+	Text = "󱞎  ",
+	Class = "  ",
 	Function = "󰡱  ",
 	Constructor = "󱌣  ",
 	Field = "  ",
@@ -16,8 +16,8 @@ M.kinds = {
 	Enum = "  ",
 	Keyword = "󱕴  ",
 	Snippet = "  ",
-	Color = "  ",
-	File = "  ",
+	Color = "  ",
+	File = "  ",
 	Referenc = "  ",
 	Folder = "󰉋  ",
 	EnumMember = "  ",
@@ -25,7 +25,7 @@ M.kinds = {
 	Struct = "  ",
 	Event = "  ",
 	Operator = "  ",
-	TypeParameter = "  ",
+	TypeParameter = "󰴾  ",
 }
 
 return M

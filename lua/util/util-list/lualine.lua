@@ -69,6 +69,14 @@ function M.Config()
 				},
 			},
 			lualine_y = {
+				{
+					"lsp-status",
+					show_count = false,
+					disabled_filetypes = { "NvimTree", "TelescopePrompt", "toggleterm" },
+					icons = {
+						inactive = "󰌙",
+					},
+				},
 				{ "datetime", style = "%m/%d/%Y %H:%M:%S" },
 			},
 			lualine_z = {},

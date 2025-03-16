@@ -18,6 +18,7 @@ function M.Config()
 				"williamboman/mason.nvim",
 				"williamboman/mason-lspconfig.nvim",
 				"neovim/nvim-lspconfig",
+				"pnx/lualine-lsp-status",
 
 				-- complete
 				"hrsh7th/nvim-cmp",
@@ -53,6 +54,7 @@ function M.Config()
 				-- telescope
 				"nvim-telescope/telescope.nvim",
 				"nvim-lua/plenary.nvim",
+				"nvim-telescope/telescope-project.nvim",
 
 				-- smooth scroll
 				"psliwka/vim-smoothie",

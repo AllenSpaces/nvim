@@ -21,7 +21,9 @@ function M.Config()
 				"__pycache__",
 				"%.log",
 			},
-			extensions = {},
+			extensions = {
+				project = {},
+			},
 			sorting_strategy = "ascending",
 		},
 	})

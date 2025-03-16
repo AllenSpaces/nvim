@@ -1,8 +1,13 @@
 local function getModulePath(moduleName)
-	local file_path = vim.fn.globpath("lua", "**/" .. moduleName .. ".lua", true)
+	local config_dir = vim.fn.stdpath("config")
+	local file_path = vim.fn.globpath(config_dir .. "/lua", "**/" .. moduleName .. ".lua", true)
 
 	if file_path ~= "" then
-		return string.gsub(string.gsub(string.gsub(file_path, "^lua/", ""), "/", "."), "%.lua$", "")
+		return string.gsub(
+			string.gsub(string.gsub(file_path, "^" .. config_dir .. "/lua/", ""), "/", "."),
+			"%.lua$",
+			""
+		)
 	else
 		vim.notify("未找到文件: " .. moduleName, vim.log.levels.ERROR, { title = "nvim" })
 	end

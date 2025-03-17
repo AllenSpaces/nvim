@@ -32,6 +32,7 @@ function M.Config()
 	require("lsp.mason.conf.java_conf").JavaLSP()
 	require("lsp.mason.conf.go_conf").GoLSP()
 	require("lsp.mason.conf.vue_conf").VueLSP()
+	require("lsp.mason.conf.bash_conf").BashLSP()
 end
 
 return M

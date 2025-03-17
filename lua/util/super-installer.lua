@@ -11,6 +11,7 @@ function M.Config()
 	super.setup({
 		git = "git",
 		install = {
+			auto_update = false,
 			use = {
 				-- float terminal
 				"akinsho/toggleterm.nvim",

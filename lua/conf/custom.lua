@@ -32,6 +32,16 @@ function M.Config()
 		{ type = "option", method = "autoread", value = true },
 		{ type = "option", method = "showmode", value = false },
 		{ type = "option", method = "winblend", value = 0 },
+		{
+			type = "option",
+			method = "guicursor",
+			value = {
+				"n-v-c:hor20-Cursor/lCursor-blinkwait100-blinkon100-blinkoff100",
+				"i-ci-ve:ver25-Cursor/lCursor",
+				"r-cr:ver25-Cursor/lCursor",
+				"sm:ver25-Cursor/lCursor-blinkwait100-blinkon100-blinkoff100",
+			},
+		},
 	}
 
 	for _, item in ipairs(custom) do

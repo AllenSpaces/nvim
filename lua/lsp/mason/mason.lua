@@ -33,7 +33,6 @@ function M.Config()
 	require("lsp.mason.conf.go_conf").GoLSP()
 	require("lsp.mason.conf.vue_conf").VueLSP()
 	require("lsp.mason.conf.bash_conf").BashLSP()
-	require("lsp.mason.conf.sql_conf").SqlLSP()
 end
 
 return M

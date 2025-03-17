@@ -28,7 +28,6 @@ function M.Config()
 			go = { require("formatter.filetypes.go").gofumpt },
 			bash = { require("formatter.filetypes.sh").shfmt },
 			sh = { require("formatter.filetypes.sh").shfmt },
-			sql = { require("formatter.filetypes.sql").sqlfmt },
 		},
 	})
 end

@@ -2,7 +2,7 @@ local status, mason = pcall(require, "mason")
 local M = {}
 
 if not status then
-	require("notify")("mason is not found ...", "error", { title = "nvim" })
+	require("notify")("mason is not found ...", "error", { title = "Nvim" })
 
 	return false
 end

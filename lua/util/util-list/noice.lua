@@ -3,12 +3,12 @@ local status_noice, noice = pcall(require, "noice")
 local statis_notify, notify = pcall(require, "notify")
 
 if not status_noice then
-	vim.notify("noice is not found", vim.log.levels.ERROR, { title = "nvim" })
+	vim.notify("noice is not found", vim.log.levels.ERROR, { title = "Nvim" })
 	return false
 end
 
 if not statis_notify then
-	vim.notify("notify is not found", vim.log.levels.ERROR, { title = "nvim" })
+	vim.notify("notify is not found", vim.log.levels.ERROR, { title = "Nvim" })
 	return false
 end
 

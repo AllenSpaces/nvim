@@ -2,7 +2,7 @@ local status, fmt = pcall(require, "formatter")
 local M = {}
 
 if not status then
-	require("notify")("formatter is no found ...", "error", { title = "nvim" })
+	require("notify")("formatter is no found ...", "error", { title = "Nvim" })
 
 	return false
 end

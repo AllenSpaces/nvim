@@ -2,7 +2,7 @@ local M = {}
 
 local function commandNotify(msg)
 	if msg ~= "" then
-		vim.notify(msg, vim.log.levels.INFO, { title = "nvim" })
+		vim.notify(msg, vim.log.levels.INFO, { title = "NvimCommands" })
 	else
 		return false
 	end
@@ -28,7 +28,7 @@ function M.Config()
 				if vim.api.nvim_buf_get_name(0) == "" then
 					local ok, _ = pcall(vim.fn.execute, "Telescope find_files")
 					if not ok then
-						vim.notify("Telescope is not available.", vim.log.levels.WARN)
+						vim.notify("Telescope is not available.", vim.log.levels.WARN, { title = "NvimCommands" })
 					end
 				end
 				next()

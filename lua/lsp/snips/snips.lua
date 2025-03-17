@@ -2,7 +2,7 @@ local M = {}
 local status, _ = pcall(require, "luasnip")
 
 if not status then
-	require("notify")("luasnip is not found ...", "error", { title = "vim" })
+	require("notify")("luasnip is not found ...", "error", { title = "Nvim" })
 
 	return false
 end

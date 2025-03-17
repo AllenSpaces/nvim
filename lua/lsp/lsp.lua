@@ -3,7 +3,7 @@ local status, cmp = pcall(require, "cmp")
 local luasnip = require("luasnip")
 
 if not status then
-	require("notify")("cmp is not found ...", "error", { title = "nvim" })
+	require("notify")("cmp is not found ...", "error", { title = "Nvim" })
 
 	return false
 end

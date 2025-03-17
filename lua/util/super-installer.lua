@@ -2,7 +2,7 @@ local status, super = pcall(require, "super-installer")
 local M = {}
 
 if not status then
-	require("notify")("Super-Installer is not found...", "error", { title = "nvim" })
+	require("notify")("Super-Installer is not found...", "error", { title = "Nvim" })
 
 	return
 end

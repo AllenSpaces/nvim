@@ -2,7 +2,7 @@ local status, telescope = pcall(require, "telescope")
 local M = {}
 
 if not status then
-	require("notify")("telescope is not found ...", "error", { title = "nvim" })
+	require("notify")("telescope is not found ...", "error", { title = "Nvim" })
 
 	return false
 end

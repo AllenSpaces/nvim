@@ -2,7 +2,7 @@ local M = {}
 local status, miracle = pcall(require, "miracle-of-god")
 
 if not status then
-	require("notify")("miracle-of-god is not found ...", "error", { title = "nvim" })
+	require("notify")("miracle-of-god is not found ...", "error", { title = "Nvim" })
 
 	return false
 end

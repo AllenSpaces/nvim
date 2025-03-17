@@ -10,7 +10,7 @@ local float_col = math.floor((screen_width - float_width) / 2)
 local float_row = math.floor((screen_height - float_height) / 2)
 
 if not status then
-	require("notify")("nvim-tree is not found ...", "error", { title = "nvim" })
+	require("notify")("nvim-tree is not found ...", "error", { title = "Nvim" })
 
 	return
 end

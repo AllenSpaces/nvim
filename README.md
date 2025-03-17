@@ -2,7 +2,10 @@
 
 ## Overview
 
-This is a comprehensive Neovim configuration designed to enhance the coding experience by integrating a wide range of plugins and custom settings. The configuration is organized modularly, making it easy to manage and extend.
+> This is a comprehensive Neovim configuration designed to enhance the
+> coding experience by integrating a wide range of plugins and custom
+> settings. The configuration is organized modularly, making it easy to
+> manage and extend.
 
 ## Prerequisites
 
@@ -23,7 +26,9 @@ This is a comprehensive Neovim configuration designed to enhance the coding expe
 
 ### 1. Module Loading
 
-The `init.lua` file is responsible for loading various modules. It uses a `getModulePath` function to find the path of each module in the `lua` directory. The following modules are loaded:
+> The `init.lua` file is responsible for loading various modules. It uses
+> a `getModulePath` function to find the path of each module in the `lua`
+> directory. The following modules are loaded:
 
 ```lua
 local modules = {
@@ -49,11 +54,11 @@ local modules = {
 }
 ```
 
-Each module's `Config` function is called if the module is enabled.
+> Each module's `Config` function is called if the module is enabled.
 
 ### 2. Keybindings (`keymaps.lua`)
 
-Keybindings are set up to provide easy access to LSP features:
+> Keybindings are set up to provide easy access to LSP features:
 
 - `gd`: Navigate to the definition of the symbol under the cursor.
 - `gD`: Navigate to the declaration of the symbol under the cursor.
@@ -62,7 +67,7 @@ Keybindings are set up to provide easy access to LSP features:
 
 ### 3. Language Server Protocol (LSP)
 
-Multiple LSP servers are configured for different programming languages:
+> Multiple LSP servers are configured for different programming languages:
 
 - **Vue**: `volar` is set up for Vue.js development, supporting multiple related file types.
 - **TypeScript**: `ts_ls` with a custom plugin for Vue TypeScript support.
@@ -75,11 +80,15 @@ Multiple LSP servers are configured for different programming languages:
 
 ### 4. Code Formatting (`formatter.lua`)
 
-The `formatter.nvim` plugin is used to format code for various file types. Supported file types include `json`, `javascript`, `typescript`, `html`, `vue`, `css`, `lua`, `python`, `markdown`, `go`, `bash`, etc.
+> The `formatter.nvim` plugin is used to format code for various file
+> types. Supported file types include `json`, `javascript`, `typescript`,
+> `html`, `vue`, `css`, `lua`, `python`, `markdown`, `go`, `bash`, etc.
 
 ### 5. Treesitter (`tree-sitter.lua`)
 
-The `nvim-treesitter` plugin is configured to provide syntax highlighting, incremental selection, indentation, rainbow parentheses, and auto - tag features for multiple file types.
+> The `nvim-treesitter` plugin is configured to provide syntax highlighting,
+> incremental selection, indentation, rainbow parentheses, and auto - tag
+> features for multiple file types.
 
 ### 6. UI and Visual Enhancements
 
@@ -105,4 +114,5 @@ The `nvim-treesitter` plugin is configured to provide syntax highlighting, incre
 
 ## Contributing
 
-If you find any issues or have suggestions for improvement, please feel free to open an issue or submit a pull request.
+> If you find any issues or have suggestions for improvement, please feel free
+> to open an issue or submit a pull request.

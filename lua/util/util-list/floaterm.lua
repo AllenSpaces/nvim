@@ -28,6 +28,12 @@ function _Git()
 	git:toggle()
 end
 
+function _Sql()
+	local sql_cmd = "mysql -u root -p" .. vim.env.MYSQL_PASS
+	local sql = Terminal:new({ cmd = sql_cmd, hidden = true })
+	sql:toggle()
+end
+
 function M.Config()
 	floaterm.setup({
 		open_mapping = "<leader>ft",

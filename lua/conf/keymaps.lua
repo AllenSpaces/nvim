@@ -19,6 +19,7 @@ function M.Config()
 		{ mode = "n", key = "<leader>lu", map = ":lua _Lua()<CR>", enabled = true },
 		{ mode = "n", key = "<leader>nd", map = ":lua _Node()<CR>", enabled = true },
 		{ mode = "n", key = "<leader>py", map = ":lua _Python()<CR>", enabled = true },
+		{ mode = "n", key = "<leader>sq", map = ":lua _Sql()<CR>", enabled = true },
 		{ mode = "n", key = "<leader>e", map = ":NvimTreeToggle<CR>", enabled = true },
 		{ mode = "n", key = "<leader>nh", map = ":set nohlsearch<CR>", enabled = true },
 		{ mode = "n", key = "<leader>ms", map = ":Mason<CR>", enabled = true },

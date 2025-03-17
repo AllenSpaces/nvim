@@ -13,6 +13,8 @@ local function getModulePath(moduleName)
 	end
 end
 
+vim.notify(vim.env.MYSQL_PASS)
+
 local modules = {
 	{ moduleName = "commands", enabled = true },
 	{ moduleName = "keymaps", enabled = true },

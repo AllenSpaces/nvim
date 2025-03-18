@@ -94,13 +94,18 @@ local modules = {
 
 - **Noice**: Provides a better command - line and message display experience.
 - **Lualine**: Configured status line with a custom theme.
-- **Nvim - Tree**: A file explorer with custom icons and filtering options.
+- **Nvim-Tree**: A file explorer with custom icons and filtering options.
 - **Transparent**: Allows for a transparent background.
+- **Miracle-Of-God**：A visually stunning theme.
 
 ### 7. Completion and Snippets
 
-- **Nvim - Cmp**: A completion plugin with support for multiple sources such as LSP, buffer, path, and snippets.
+- **Nvim-Cmp**: A completion plugin with support for multiple sources such as LSP, buffer, path, and snippets.
 - **LuaSnip**: A snippet engine used for code completion.
+
+### 8. AI
+
+- **CodeCompanion**：AI based on DeepSeek
 
 ## Customization
 

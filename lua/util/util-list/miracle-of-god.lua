@@ -9,6 +9,7 @@ end
 
 function M.Config()
 	miracle.setup({})
+	vim.cmd([[colorscheme miracle-of-god]])
 end
 
 return M

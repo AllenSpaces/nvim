@@ -9,7 +9,6 @@ end
 
 function M.Config()
 	icons.set_icon({
-		lua = { icon = "󱨇", color = "#d3ffe7", name = "Lua" },
 		c = { icon = "", color = "#c0fbfd", name = "C" },
 		cpp = { icon = "", color = "#c0fbfd", name = "Cpp" },
 		py = { icon = "", color = "#f6f5bd", name = "Python" },
@@ -58,7 +57,8 @@ function M.Config()
 		so = { icon = "", color = "#dae0ff", name = "So" },
 		http = { icon = "󰭄", color = "#ffc0b6", name = "Http" },
 		dart = { icon = "", color = "#ffc0b6", name = "Dart" },
-		toml = { icon = "󰰥", color = "#ffd3aa", name = "toml" },
+		toml = { icon = "󰰥", color = "#ffd3aa", name = "Toml" },
+		lua = { icon = "󱨇", color = "#f3ddc7", name = "Lua" },
 		["tsconfig.json"] = { icon = "", color = "#ffc0b6", name = "TsConfig" },
 		[".env"] = { icon = "", color = "#f8e2ef", name = "Env" },
 		["favicon.ico"] = { icon = "󱞈", color = "#c0fbfd", name = "Favicon" },

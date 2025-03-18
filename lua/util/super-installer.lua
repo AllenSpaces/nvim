@@ -11,7 +11,7 @@ function M.Config()
 	super.setup({
 		git = "git",
 		install = {
-			auto_update = false,
+			auto_download = false,
 			use = {
 				-- float terminal
 				"akinsho/toggleterm.nvim",
@@ -79,6 +79,9 @@ function M.Config()
 				-- database
 				"tpope/vim-dadbod",
 				"kristijanhusak/vim-dadbod-ui",
+
+				-- ai
+				"olimorris/codecompanion.nvim",
 			},
 		},
 

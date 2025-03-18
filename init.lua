@@ -13,8 +13,6 @@ local function getModulePath(moduleName)
 	end
 end
 
-vim.notify(vim.env.MYSQL_PASS)
-
 local modules = {
 	{ moduleName = "commands", enabled = true },
 	{ moduleName = "keymaps", enabled = true },
@@ -35,6 +33,7 @@ local modules = {
 	{ moduleName = "lsp", enabled = true },
 	{ moduleName = "snips", enabled = true },
 	{ moduleName = "super-installer", enabled = true },
+	{ moduleName = "code-companion", enabled = true },
 }
 
 for _, util in ipairs(modules) do

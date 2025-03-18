@@ -53,6 +53,8 @@ function M.Config()
 			enabled = true,
 			opt,
 		},
+		{ mode = "n", key = "<leader>ct", map = ":CodeCompanionChat Toggle<CR>", enabled = true },
+		{ mode = { "v", "n" }, key = "<leader>cc", map = ":'<,'>CodeCompanion<CR>", enabled = true },
 	}
 
 	for _, map in ipairs(mappings) do

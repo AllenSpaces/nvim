@@ -33,6 +33,7 @@ function M.Config()
 	require("lsp.mason.conf.go_conf").GoLSP()
 	require("lsp.mason.conf.vue_conf").VueLSP()
 	require("lsp.mason.conf.bash_conf").BashLSP()
+	-- require("lsp.mason.conf.markdown_conf").MarkdownLSP()
 end
 
 return M

@@ -61,7 +61,6 @@ function M.Config()
 			{ name = "buffer" },
 			{ name = "path" },
 			{ name = "lua_cmp" },
-			{ name = "codecompanion" },
 		}),
 		formatting = {
 			fields = { "kind", "abbr", "menu" },
@@ -74,7 +73,6 @@ function M.Config()
 					buffer = "  [BUFFER]",
 					path = "  [PATH]",
 					lua_cmp = "   [LUACMP]",
-					codecompanion = "    [DeekSeek]",
 				})[entry.source.name]
 				return vim_item
 			end,
@@ -90,7 +88,6 @@ function M.Config()
 			{ name = "buffer" },
 			{ name = "path" },
 			{ name = "cmdline" },
-			{ name = "codecompanion" },
 		},
 		formatting = {
 			fields = { "kind", "abbr", "menu" },
@@ -101,7 +98,6 @@ function M.Config()
 					buffer = "  [BUFFER]",
 					path = "  [PATH]",
 					cmdline = "  [CMDLINE]",
-					codecompanion = "    [DeekSeek]",
 				})[entry.source.name]
 				return vim_item
 			end,

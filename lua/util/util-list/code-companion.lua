@@ -35,7 +35,7 @@ function M.Config()
 						foldcolumn = "0",
 						linebreak = true,
 						list = false,
-						numberwidth = 1,
+						numberwidth = 2,
 						signcolumn = "no",
 						spell = false,
 						wrap = true,
@@ -78,6 +78,17 @@ function M.Config()
 				},
 			},
 		},
+	})
+
+	local group = vim.api.nvim_create_augroup("CodeCompanionFidgetHooks", {})
+
+	vim.api.nvim_create_autocmd({ "User" }, {
+		pattern = "CodeCompanionChatOpened",
+		group = group,
+		callback = function()
+			vim.wo.number = false
+			vim.notify("DeepSeek At Your Service", vim.log.levels.INFO, { title = "DeepSeek" })
+		end,
 	})
 end
 

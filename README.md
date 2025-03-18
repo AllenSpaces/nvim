@@ -15,8 +15,8 @@
 
 ## Installation
 
-1. **Clone the Configuration**:
-   - Clone this repository to your Neovim configuration directory (usually `~/.config/nvim` on Linux or `%LOCALAPPDATA%\nvim` on Windows).
+- Clone this repository to your Neovim configuration directory (usually `~/.config/nvim` on Linux or `%LOCALAPPDATA%\nvim` on Windows).
+
 2. **Install Plugins**:
    - The configuration uses a custom super - installer (`super-installer.lua`). Start Neovim, and the installer will automatically download and set up the necessary plugins.
 3. **Verify Installation**:
@@ -114,5 +114,4 @@ local modules = {
 
 ## Contributing
 
-> If you find any issues or have suggestions for improvement, please feel free
-> to open an issue or submit a pull request.
+> If you find any issues or have suggestions for improvement, please feel free to open an issue or submit a pull request.

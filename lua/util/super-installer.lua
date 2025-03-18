@@ -82,6 +82,12 @@ function M.Config()
 
 				-- ai
 				"olimorris/codecompanion.nvim",
+
+				-- markdown
+				"MeanderingProgrammer/render-markdown.nvim",
+
+				-- ai loading
+				"j-hui/fidget.nvim",
 			},
 		},
 

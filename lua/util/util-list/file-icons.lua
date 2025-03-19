@@ -11,6 +11,7 @@ function M.Config()
 	icons.set_icon({
 		c = { icon = "", color = "#c0fbfd", name = "C" },
 		cpp = { icon = "", color = "#c0fbfd", name = "Cpp" },
+		cs = { icon = "", color = "#c0fbfd", name = "CSharp" },
 		py = { icon = "", color = "#f6f5bd", name = "Python" },
 		js = { icon = "", color = "#f6f5bd", name = "Js" },
 		ts = { icon = "", color = "#c0fbfd", name = "Ts" },
@@ -71,7 +72,7 @@ function M.Config()
 		["custom.lua"] = { icon = "󰬎", color = "#dae0ff", name = "GlobalSettings" },
 		["keymaps.lua"] = { icon = "󱕵", color = "#dae0ff", name = "keyMaps" },
 		["www"] = { icon = "󰇧", color = "#ffc06b", name = "Network" },
-		["LICENSE"] = { icon = "", color = "#dae0ff", name = "LICENSE" },
+		["LICENSE"] = { icon = "", color = "#ffd3aa", name = "LICENSE" },
 		[".gitignore"] = { icon = "", color = "#ffc0b6", name = "GitIgnore" },
 		[".zshrc"] = { icon = "󰬡", color = "#e9fdfe", name = "Zshrc" },
 		["_layout.tsx"] = { icon = "󰬓", color = "#fdf0db", name = "Layout" },

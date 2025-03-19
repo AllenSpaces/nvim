@@ -54,7 +54,10 @@ function M.Config()
 			opt,
 		},
 		{ mode = "n", key = "<leader>ct", map = ":CodeCompanionChat Toggle<CR>", enabled = true },
-		{ mode = { "v", "n" }, key = "<leader>cc", map = ":'<,'>CodeCompanion<CR>", enabled = true },
+		{ mode = "v", key = "<leader>cc", map = ":'<,'>CodeCompanion<CR>", enabled = true },
+		{ mode = "n", key = "<leader>cc", map = ":CodeCompanion<CR>", enabled = true },
+		{ mode = "v", key = "<leader>ca", map = ":'<,'>CodeCompanionActions<CR>", enabled = true },
+		{ mode = "n", key = "<leader>ca", map = ":CodeCompanionActions<CR>", enabled = true },
 	}
 
 	for _, map in ipairs(mappings) do

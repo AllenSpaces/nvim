@@ -8,7 +8,7 @@ function M.Config()
 		{ type = "global", method = "db_ui_show_help", value = 0 },
 		{ type = "global", method = "termguicolors", value = true },
 		{ type = "option", method = "mouse", value = "" },
-		{ type = "option", method = "relativenumber", value = false },
+		{ type = "option", method = "relativenumber", value = true },
 		{ type = "option", method = "number", value = true },
 		{ type = "option", method = "numberwidth", value = 4 },
 		{ type = "option", method = "autoindent", value = true },

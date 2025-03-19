@@ -28,6 +28,10 @@ function M.Config()
 			go = { require("formatter.filetypes.go").gofumpt },
 			bash = { require("formatter.filetypes.sh").shfmt },
 			sh = { require("formatter.filetypes.sh").shfmt },
+			c = { require("formatter.filetypes.c").clangformat },
+			cpp = { require("formatter.filetypes.cpp").clangformat },
+			cs = { require("formatter.filetypes.cs").clangformat },
+			dart = { require("formatter.filetypes.dart").dartformat },
 		},
 	})
 end

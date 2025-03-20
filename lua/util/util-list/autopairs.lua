@@ -3,7 +3,6 @@ local status, atpairs = pcall(require, "nvim-autopairs")
 
 if not status then
 	vim.notify("auto-pairs is not found ...", vim.log.levels.ERROR, { title = "Nvim" })
-
 	return false
 end
 

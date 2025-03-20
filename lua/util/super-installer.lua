@@ -3,7 +3,6 @@ local M = {}
 
 if not status then
 	vim.notify("Super-Installer is not found...", vim.log.levels.ERROR, { title = "Nvim" })
-
 	return
 end
 
@@ -84,9 +83,6 @@ function M.Config()
 
 				-- markdown
 				"MeanderingProgrammer/render-markdown.nvim",
-
-				-- ai loading
-				"j-hui/fidget.nvim",
 
 				--translator
 				"nvima/nvim-translator",

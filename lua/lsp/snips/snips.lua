@@ -3,7 +3,6 @@ local status, _ = pcall(require, "luasnip")
 
 if not status then
 	vim.notify("luasnip is not found ...", vim.log.levels.ERROR, { title = "Nvim" })
-
 	return false
 end
 

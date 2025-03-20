@@ -3,7 +3,6 @@ local M = {}
 
 if not status then
 	vim.notify("lualine is not found ...", vim.log.levels.ERROR, { title = "Nvim" })
-
 	return false
 end
 

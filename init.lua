@@ -35,8 +35,6 @@ local modules = {
 	{ moduleName = "super-installer", enabled = true },
 	{ moduleName = "code-companion", enabled = true },
 	{ moduleName = "render-markdown", enabled = true },
-	{ moduleName = "fidget", enabled = false },
-	{ moduleName = "translator", enabled = false },
 }
 
 for _, util in ipairs(modules) do

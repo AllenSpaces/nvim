@@ -4,7 +4,6 @@ local M = {}
 
 if not status then
 	vim.notify("Floaterm is not Found ...", vim.log.levels.ERROR, { title = "Nvim" })
-
 	return false
 end
 

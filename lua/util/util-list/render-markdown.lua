@@ -2,7 +2,7 @@ local M = {}
 local status, md_render = pcall(require, "render-markdown")
 
 if not status then
-	vim.notify("render-markdown is not found ...")
+	vim.notify("render-markdown is not found ...", vim.log.levels.ERROR, { title = "Nvim" })
 	return false
 end
 

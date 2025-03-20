@@ -11,7 +11,6 @@ local float_row = math.floor((screen_height - float_height) / 2)
 
 if not status then
 	vim.notify("nvim-tree is not found ...", vim.log.levels.ERROR, { title = "Nvim" })
-
 	return
 end
 

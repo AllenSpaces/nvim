@@ -3,7 +3,6 @@ local M = {}
 
 if not status then
 	vim.notify("Transparent is not undefined", vim.log.levels.ERROR, { title = "Nvim" })
-
 	return false
 end
 

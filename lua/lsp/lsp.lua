@@ -3,7 +3,7 @@ local status, cmp = pcall(require, "cmp")
 local luasnip = require("luasnip")
 
 if not status then
-	require("notify")("cmp is not found ...", "error", { title = "Nvim" })
+	vim.notify("cmp is not found ...", vim.log.levels.ERROR, { title = "Nvim" })
 
 	return false
 end
@@ -61,6 +61,9 @@ function M.Config()
 			{ name = "buffer" },
 			{ name = "path" },
 			{ name = "lua_cmp" },
+			{
+				name = "codecompanion",
+			},
 		}),
 		formatting = {
 			fields = { "kind", "abbr", "menu" },
@@ -68,11 +71,11 @@ function M.Config()
 				vim_item.kind =
 					string.format("%s %s", require("lsp.kinds.kinds").kinds[vim_item.kind], vim_item.kind .. "  ")
 				vim_item.menu = ({
-					luasnip = "  [LUASNIP]",
-					nvim_lsp = "  [LSP]",
-					buffer = "  [BUFFER]",
-					path = "  [PATH]",
-					lua_cmp = "   [LUACMP]",
+					luasnip = "   󰬚",
+					nvim_lsp = "   󰬓",
+					buffer = "   󰬉",
+					path = "   󰬗",
+					lua_cmp = "   󰬊",
 				})[entry.source.name]
 				return vim_item
 			end,
@@ -82,22 +85,45 @@ function M.Config()
 		},
 	})
 
-	cmp.setup.cmdline({ "/", "?", ":" }, {
+	cmp.setup.cmdline({ "/", "?" }, {
 		mapping = cmp.mapping.preset.cmdline(),
-		sources = {
+		sources = cmp.config.sources({
 			{ name = "buffer" },
-			{ name = "path" },
-			{ name = "cmdline" },
-		},
+		}),
 		formatting = {
 			fields = { "kind", "abbr", "menu" },
 			format = function(entry, vim_item)
 				vim_item.kind =
 					string.format("%s %s", require("lsp.kinds.kinds").kinds[vim_item.kind], vim_item.kind .. "  ")
 				vim_item.menu = ({
-					buffer = "  [BUFFER]",
-					path = "  [PATH]",
-					cmdline = "  [CMDLINE]",
+					buffer = "   󰬉",
+				})[entry.source.name]
+				return vim_item
+			end,
+		},
+		experimental = {
+			ghost_text = true,
+		},
+	})
+
+	cmp.setup.cmdline({ ":" }, {
+		mapping = cmp.mapping.preset.cmdline(),
+		sources = cmp.config.sources({
+			{ name = "path" },
+			{
+				name = "codecompanion",
+			},
+		}, {
+			{ name = "cmdline" },
+		}),
+		formatting = {
+			fields = { "kind", "abbr", "menu" },
+			format = function(entry, vim_item)
+				vim_item.kind =
+					string.format("%s %s", require("lsp.kinds.kinds").kinds[vim_item.kind], vim_item.kind .. "  ")
+				vim_item.menu = ({
+					path = "   󰬗",
+					cmdline = "   󰬊",
 				})[entry.source.name]
 				return vim_item
 			end,

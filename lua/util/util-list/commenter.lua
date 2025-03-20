@@ -2,7 +2,7 @@ local M = {}
 local status, commenter = pcall(require, "Comment")
 
 if not status then
-	require("notify")("Comment is not found ...", "error", { title = "Nvim" })
+	vim.notify("Comment is not found ...", vim.log.levels.ERROR, { title = "Nvim" })
 
 	return false
 end

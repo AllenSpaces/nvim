@@ -2,7 +2,7 @@ local status, super = pcall(require, "super-installer")
 local M = {}
 
 if not status then
-	require("notify")("Super-Installer is not found...", "error", { title = "Nvim" })
+	vim.notify("Super-Installer is not found...", vim.log.levels.ERROR, { title = "Nvim" })
 
 	return
 end
@@ -87,6 +87,9 @@ function M.Config()
 
 				-- ai loading
 				"j-hui/fidget.nvim",
+
+				--translator
+				"nvima/nvim-translator",
 			},
 		},
 

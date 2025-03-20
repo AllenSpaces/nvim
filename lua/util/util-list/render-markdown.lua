@@ -32,6 +32,7 @@ function M.Config()
 		quote = {
 			highlight = "DiffAdd",
 		},
+		dash = { icon = "" },
 		code = {
 			above = "",
 			below = "",

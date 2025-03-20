@@ -2,7 +2,7 @@ local status, lul = pcall(require, "lualine")
 local M = {}
 
 if not status then
-	require("notify")("lualine is not found ...", "error", { title = "Nvim" })
+	vim.notify("lualine is not found ...", vim.log.levels.ERROR, { title = "Nvim" })
 
 	return false
 end

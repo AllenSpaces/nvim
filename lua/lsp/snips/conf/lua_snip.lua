@@ -11,7 +11,7 @@ return {
       local status, {} = pcall(require, "{}")
 
       if not status then
-        vim.notify("{} is not found ...")
+        vim.notify("{} is not found ...", vim.log.levels.ERROR, {{ title = "Nvim" }})
         return false
       end
     ]],

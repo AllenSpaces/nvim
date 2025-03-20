@@ -1,8 +1,14 @@
 local M = {}
 local status, ai = pcall(require, "codecompanion")
+local DeepSeekKey = os.getenv("DEEPSEEK_API_KEY")
 
 if not status then
-	vim.notify("codecompanion is not found ...")
+	vim.notify("codecompanion is not found ...", vim.log.levels.ERROR, { title = "Nvim" })
+	return false
+end
+
+if DeepSeekKey == "" then
+	vim.notify("DeepSeekApi key not configured correctly", vim.log.levels.ERROR, { title = "DeepSeek" })
 	return false
 end
 
@@ -15,7 +21,7 @@ function M.Config()
 			action_palette = {
 				width = 95,
 				height = 5,
-				prompt = "Acrions ",
+				prompt = "Actions ",
 				provider = "telescope",
 				opts = {
 					show_default_actions = false,
@@ -25,8 +31,8 @@ function M.Config()
 			chat = {
 				intro_message = "Welcome to the DeepSeek model",
 				icons = {
-					pinned_buffer = " ",
-					watched_buffer = "👀 ",
+					pinned_buffer = " ",
+					watched_buffer = "󰡭 ",
 				},
 				window = {
 					layout = "float",
@@ -57,13 +63,11 @@ function M.Config()
 			deepseek = function()
 				return require("codecompanion.adapters").extend("deepseek", {
 					env = {
-						api_key = function()
-							return os.getenv("DEEPSEEK_API_KEY")
-						end,
+						api_key = DeepSeekKey,
 					},
 					schema = {
 						model = {
-							default = "deepseek-coder",
+							default = "deepseek-reasoner",
 						},
 					},
 				})
@@ -73,6 +77,28 @@ function M.Config()
 		strategies = {
 			chat = {
 				adapter = "deepseek",
+				slash_commands = {
+					["buffer"] = {
+						opts = {
+							provider = "telescope",
+						},
+					},
+					["file"] = {
+						opts = {
+							provider = "telescope",
+						},
+					},
+					["symbols"] = {
+						opts = {
+							provider = "telescope",
+						},
+					},
+					["workspace"] = {
+						opts = {
+							provider = "telescope",
+						},
+					},
+				},
 			},
 			inline = {
 				adapter = "deepseek",
@@ -100,7 +126,7 @@ function M.Config()
 					user_prompt = false,
 					stop_context_insertion = true,
 					adapter = {
-						name = "deepseek-coder",
+						name = "deepseek-reasoner",
 					},
 				},
 				prompts = {

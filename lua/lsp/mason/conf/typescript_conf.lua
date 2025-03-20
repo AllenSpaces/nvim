@@ -17,6 +17,7 @@ function M.TypeScriptLSP()
 			"typescript",
 			"javascriptreact",
 			"typescriptreact",
+			"vue",
 		},
 	})
 end

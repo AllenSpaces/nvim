@@ -10,7 +10,6 @@ function M.VueLSP()
 		},
 		settings = {
 			volar = {
-				vueVersion = "3.0",
 				templateInterpolationService = {
 					enable = true,
 				},

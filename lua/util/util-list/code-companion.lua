@@ -173,6 +173,7 @@ function M.Config()
 		group = group,
 		callback = function()
 			vim.wo.number = false
+			vim.wo.relativenumber = false
 			vim.notify("DeepSeek At Your Service", vim.log.levels.INFO, { title = "DeepSeek" })
 		end,
 	})

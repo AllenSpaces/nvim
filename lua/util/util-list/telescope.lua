@@ -29,6 +29,9 @@ function M.Config()
 			},
 			extensions = {
 				project = {},
+				live_grep_args = {
+					auto_quoting = true,
+				},
 			},
 			sorting_strategy = "ascending",
 		},

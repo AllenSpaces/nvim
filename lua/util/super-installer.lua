@@ -55,6 +55,7 @@ function M.Config()
 				"nvim-telescope/telescope.nvim",
 				"nvim-lua/plenary.nvim",
 				"nvim-telescope/telescope-project.nvim",
+				"nvim-telescope/telescope-live-grep-args.nvim",
 
 				-- smooth scroll
 				"psliwka/vim-smoothie",

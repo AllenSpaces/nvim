@@ -43,7 +43,7 @@ for _, util in ipairs(modules) do
 	if util.enabled then
 		local status, _ = pcall(require, getModulePath(util.moduleName))
 		if not status then
-			vim.notify("Failed to load module: your_module", vim.log.levels.ERROR, { title = "VimInit" })
+			vim.notify("Failed to load module: " .. util.moduleName, vim.log.levels.ERROR, { title = "VimInit" })
 		else
 			require(getModulePath(util.moduleName)).Config()
 		end

@@ -15,6 +15,7 @@ function M.Config()
 		{ mode = "n", key = "<leader>fs", map = ":Telescope treesitter<CR>", enabled = true },
 		{ mode = "n", key = "<leader>fm", map = ":Telescope noice<CR>", enabled = true },
 		{ mode = "n", key = "<leader>fp", map = ":Telescope project<CR>", enabled = true },
+		{ mode = "n", key = "<leader>fl", map = ":Telescope live_grep_args<CR>", enabled = true },
 		{ mode = "n", key = "<leader>lg", map = ":lua _Git()<CR>", enabled = true },
 		{ mode = "n", key = "<leader>lu", map = ":lua _Lua()<CR>", enabled = true },
 		{ mode = "n", key = "<leader>nd", map = ":lua _Node()<CR>", enabled = true },

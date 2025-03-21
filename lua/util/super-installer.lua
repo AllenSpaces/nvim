@@ -8,9 +8,9 @@ end
 
 function M.Config()
 	super.setup({
-		git = "git",
+		method = "ssh",
 		install = {
-			use = {
+			packages = {
 				-- float terminal
 				"akinsho/toggleterm.nvim",
 
@@ -18,7 +18,6 @@ function M.Config()
 				"williamboman/mason.nvim",
 				"williamboman/mason-lspconfig.nvim",
 				"neovim/nvim-lspconfig",
-				"pnx/lualine-lsp-status",
 
 				-- complete
 				"hrsh7th/nvim-cmp",
@@ -43,7 +42,7 @@ function M.Config()
 
 				-- status line
 				"nvim-lualine/lualine.nvim",
-				"WhoIsSethDaniel/lualine-lsp-progress.nvim",
+				"pnx/lualine-lsp-status",
 
 				-- code hilight
 				"nvim-treesitter/nvim-treesitter",
@@ -56,6 +55,7 @@ function M.Config()
 				"nvim-lua/plenary.nvim",
 				"nvim-telescope/telescope-project.nvim",
 				"nvim-telescope/telescope-live-grep-args.nvim",
+				"wukuohao2003/telescope-treesitter-info.nvim",
 
 				-- smooth scroll
 				"psliwka/vim-smoothie",
@@ -75,18 +75,26 @@ function M.Config()
 				-- prettier command
 				"folke/noice.nvim",
 
-				-- database
-				"tpope/vim-dadbod",
-				"kristijanhusak/vim-dadbod-ui",
-
 				-- ai
 				"olimorris/codecompanion.nvim",
 
 				-- markdown
 				"MeanderingProgrammer/render-markdown.nvim",
+				"folke/snacks.nvim",
 
-				--translator
-				"nvima/nvim-translator",
+				-- progress
+				"j-hui/fidget.nvim",
+			},
+		},
+
+		ui = {
+			progress = {
+				icon = "",
+			},
+			manager = {
+				icon = {
+					check = "󱥾",
+				},
 			},
 		},
 

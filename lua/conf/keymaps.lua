@@ -16,6 +16,7 @@ function M.Config()
 		{ mode = "n", key = "<leader>fm", map = ":Telescope noice<CR>", enabled = true },
 		{ mode = "n", key = "<leader>fp", map = ":Telescope project<CR>", enabled = true },
 		{ mode = "n", key = "<leader>fl", map = ":Telescope live_grep_args<CR>", enabled = true },
+		{ mode = "n", key = "<leader>fh", map = ":Telescope treesitter_info<CR>", enabled = true },
 		{ mode = "n", key = "<leader>lg", map = ":lua _Git()<CR>", enabled = true },
 		{ mode = "n", key = "<leader>lu", map = ":lua _Lua()<CR>", enabled = true },
 		{ mode = "n", key = "<leader>nd", map = ":lua _Node()<CR>", enabled = true },
@@ -24,8 +25,13 @@ function M.Config()
 		{ mode = "n", key = "<leader>e", map = ":NvimTreeToggle<CR>", enabled = true },
 		{ mode = "n", key = "<leader>nh", map = ":set nohlsearch<CR>", enabled = true },
 		{ mode = "n", key = "<leader>ms", map = ":Mason<CR>", enabled = true },
-		{ mode = "n", key = "<leader>db", map = ":DBUI<CR>", enabled = true },
 		{ mode = "n", key = "<leader>b", map = "<C-o>", enabled = true },
+		{ mode = "n", key = "<leader>ct", map = ":CodeCompanionChat Toggle<CR>", enabled = true },
+		{ mode = "v", key = "<leader>cc", map = ":'<,'>CodeCompanion<CR>", enabled = true },
+		{ mode = "n", key = "<leader>cc", map = ":CodeCompanion<CR>", enabled = true },
+		{ mode = "v", key = "<leader>ca", map = ":'<,'>CodeCompanionActions<CR>", enabled = true },
+		{ mode = "n", key = "<leader>ca", map = ":CodeCompanionActions<CR>", enabled = true },
+
 		{
 			mode = "n",
 			key = "gd",
@@ -54,11 +60,13 @@ function M.Config()
 			enabled = true,
 			opt,
 		},
-		{ mode = "n", key = "<leader>ct", map = ":CodeCompanionChat Toggle<CR>", enabled = true },
-		{ mode = "v", key = "<leader>cc", map = ":'<,'>CodeCompanion<CR>", enabled = true },
-		{ mode = "n", key = "<leader>cc", map = ":CodeCompanion<CR>", enabled = true },
-		{ mode = "v", key = "<leader>ca", map = ":'<,'>CodeCompanionActions<CR>", enabled = true },
-		{ mode = "n", key = "<leader>ca", map = ":CodeCompanionActions<CR>", enabled = true },
+		{
+			mode = "n",
+			key = "rn",
+			map = "<cmd>lua vim.lsp.buf.rename()<CR>",
+			enabled = true,
+			opt,
+		},
 	}
 
 	for _, map in ipairs(mappings) do

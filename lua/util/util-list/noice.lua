@@ -51,14 +51,15 @@ function M.Config()
 		},
 		lsp = {
 			progress = {
-				enabled = true,
+				enabled = false,
 				format = "lsp_progress",
 				format_done = "lsp_progress_done",
-				view = "cmdline_popup",
+				throttle = 1000 / 30,
+				view = "mini",
 			},
 			message = {
 				enabled = true,
-				view = "notify",
+				view = "messages",
 			},
 		},
 		presets = {

@@ -28,10 +28,11 @@ function M.Config()
 				"%.log",
 			},
 			extensions = {
-				project = {},
-				live_grep_args = {
-					auto_quoting = true,
+				project = {
+					sync_with_nvim_tree = true,
 				},
+				live_grep_args = {},
+				treesitter_info = {},
 			},
 			sorting_strategy = "ascending",
 		},

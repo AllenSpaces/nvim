@@ -9,7 +9,7 @@ local function getModulePath(moduleName)
 			""
 		)
 	else
-		vim.notify("Undefinde FileName: " .. moduleName, vim.log.levels.ERROR, { title = "Nvim" })
+		vim.notify("Undefined FileName: " .. moduleName, vim.log.levels.ERROR, { title = "Nvim" })
 	end
 end
 
@@ -35,6 +35,7 @@ local modules = {
 	{ moduleName = "super-installer", enabled = true },
 	{ moduleName = "code-companion", enabled = true },
 	{ moduleName = "render-markdown", enabled = true },
+	{ moduleName = "snacks", enabled = true },
 }
 
 for _, util in ipairs(modules) do

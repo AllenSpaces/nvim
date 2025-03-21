@@ -1,3 +1,5 @@
+[[TOC]]
+
 # Neovim Configuration README
 
 ## Overview

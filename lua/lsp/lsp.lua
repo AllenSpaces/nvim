@@ -60,9 +60,6 @@ function M.Config()
 			{ name = "buffer" },
 			{ name = "path" },
 			{ name = "lua_cmp" },
-			{
-				name = "codecompanion",
-			},
 		}),
 		formatting = {
 			fields = { "kind", "abbr", "menu" },

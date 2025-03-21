@@ -151,7 +151,7 @@ function M.Config()
 								require("codecompanion.helpers.actions").get_code(context.start_line, context.end_line)
 
 							return string.format(
-								"请解释buffer %d中的这段代码\n\n```%s\n%s\n```",
+								"请解释buffer {{%d}} 中的这段代码\n\n```%s\n%s\n```",
 								context.bufnr,
 								context.filetype,
 								input

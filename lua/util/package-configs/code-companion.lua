@@ -1,5 +1,5 @@
 local M = {}
-local status, ai = pcall(require, "codecompanion")
+local status, AI = pcall(require, "codecompanion")
 local DeepSeekKey = os.getenv("DEEPSEEK_API_KEY")
 
 if not status then
@@ -7,13 +7,13 @@ if not status then
 	return false
 end
 
-if DeepSeekKey == "" then
+if not DeepSeekKey then
 	vim.notify("DeepSeekApi key not configured correctly", vim.log.levels.ERROR, { title = "DeepSeek" })
 	return false
 end
 
 function M.Config()
-	ai.setup({
+	AI.setup({
 		opts = {
 			language = "zh",
 		},
@@ -34,6 +34,7 @@ function M.Config()
 					pinned_buffer = " ",
 					watched_buffer = "󰡭 ",
 				},
+				start_in_insert_mode = true,
 				window = {
 					layout = "float",
 					position = nil,
@@ -77,6 +78,10 @@ function M.Config()
 		strategies = {
 			chat = {
 				adapter = "deepseek",
+				roles = {
+					user = "Wu Kuohao",
+					llm = "DeepSeek Service",
+				},
 				slash_commands = {
 					["buffer"] = {
 						opts = {
@@ -175,6 +180,14 @@ function M.Config()
 			vim.wo.number = false
 			vim.wo.relativenumber = false
 			vim.notify("DeepSeek At Your Service", vim.log.levels.INFO, { title = "DeepSeek" })
+		end,
+	})
+
+	vim.api.nvim_create_autocmd({ "User" }, {
+		pattern = "CodeCompanionChatHidden",
+		group = group,
+		callback = function()
+			vim.notify("Tranks For Using DeepSeek Chat", vim.log.levels.INFO, { title = "DeepSeek" })
 		end,
 	})
 end

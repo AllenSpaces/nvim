@@ -8,7 +8,7 @@ function M.Config()
 	local mappings = {
 		{ mode = "i", key = "jk", map = "<ESC>", enabled = true },
 		{ mode = "v", key = "v", map = "<ESC>", enabled = true },
-		{ mode = "n", key = "<leader>q", map = ":qa<CR>", enabled = true },
+		{ mode = "n", key = "<leader>q", map = ":q<CR>", enabled = true },
 		{ mode = "n", key = "<leader>w", map = "<C-W><C-W>", enabled = true },
 		{ mode = "n", key = "<leader>ff", map = ":Telescope find_files<CR>", enabled = true },
 		{ mode = "n", key = "<leader>fo", map = ":Telescope oldfiles<CR>", enabled = true },
@@ -32,32 +32,12 @@ function M.Config()
 		{ mode = "n", key = "<leader>cc", map = ":CodeCompanion<CR>", enabled = true },
 		{ mode = "v", key = "<leader>ca", map = ":'<,'>CodeCompanionActions<CR>", enabled = true },
 		{ mode = "n", key = "<leader>ca", map = ":CodeCompanionActions<CR>", enabled = true },
-
 		{
 			mode = "n",
 			key = "gd",
-			map = "<cmd>lua vim.lsp.buf.definition()<CR>",
-			enabled = true,
-			opt,
-		},
-		{
-			mode = "n",
-			key = "gD",
-			map = "<cmd>lua vim.lsp.buf.declaration()<CR>",
-			enabled = true,
-			opt,
-		},
-		{
-			mode = "n",
-			key = "gi",
-			map = "<cmd>lua vim.lsp.buf.implementation()<CR>",
-			enabled = true,
-			opt,
-		},
-		{
-			mode = "n",
-			key = "gt",
-			map = "<cmd>lua vim.lsp.buf.type_definition()<CR>",
+			map = function()
+				require("telescope.builtin").lsp_definitions()
+			end,
 			enabled = true,
 			opt,
 		},
@@ -65,6 +45,15 @@ function M.Config()
 			mode = "n",
 			key = "rn",
 			map = "<cmd>lua vim.lsp.buf.rename()<CR>",
+			enabled = true,
+			opt,
+		},
+		{
+			mode = "n",
+			key = "ld",
+			map = function()
+				vim.diagnostic.open_float({ source = true, border = "rounded" })
+			end,
 			enabled = true,
 			opt,
 		},

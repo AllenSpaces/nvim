@@ -9,6 +9,7 @@ end
 function M.Config()
 	snacks.setup({
 		image = {},
+		indent = {},
 	})
 end
 

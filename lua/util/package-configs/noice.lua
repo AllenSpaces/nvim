@@ -41,25 +41,19 @@ function M.Config()
 				lua = { icon = " " },
 			},
 		},
-		messages = {
-			enabled = true,
-			view = "notify",
-			view_error = "notify",
-			view_warn = "notify",
-			view_history = "messages",
-			view_search = "virtualtext",
-		},
+
 		lsp = {
 			progress = {
-				enabled = false,
-				format = "lsp_progress",
-				format_done = "lsp_progress_done",
-				throttle = 1000 / 30,
-				view = "mini",
-			},
-			message = {
 				enabled = true,
-				view = "messages",
+				format = "[[%title]]\nProgress: %percentage%%\nStatus: %message",
+				format_done = "completed",
+				hrottle = 1000 / 120,
+				view = "notify",
+			},
+			override = {
+				["vim.lsp.util.convert_input_to_markdown_lines"] = true,
+				["vim.lsp.util.stylize_markdown"] = true,
+				["cmp.entry.get_documentation"] = true,
 			},
 		},
 		presets = {

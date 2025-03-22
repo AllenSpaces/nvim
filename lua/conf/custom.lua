@@ -18,7 +18,7 @@ function M.Config()
 		{ type = "option", method = "smartindent", value = true },
 		{ type = "option", method = "clipboard", value = "unnamedplus" },
 		{ type = "option", method = "cursorline", value = true },
-		{ type = "option", method = "splitbelow", value = false },
+		{ type = "option", method = "splitbelow", value = true },
 		{ type = "option", method = "splitright", value = true },
 		{ type = "option", method = "confirm", value = false },
 		{ type = "option", method = "backup", value = false },

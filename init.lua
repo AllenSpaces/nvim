@@ -41,6 +41,7 @@ local modules = {
 for _, util in ipairs(modules) do
 	vim.opt.runtimepath:append(os.getenv("HOME") .. "/.super/package/*")
 	vim.opt.runtimepath:append(os.getenv("HOME") .. "/.super/package/*/after")
+	vim.opt.fillchars:append({ eob = " " })
 	if util.enabled then
 		local status, _ = pcall(require, getModulePath(util.moduleName))
 		if not status then

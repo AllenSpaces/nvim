@@ -28,8 +28,12 @@ function M.Config()
 			end,
 		},
 		window = {
-			completion = cmp.config.window.bordered(),
-			documentation = cmp.config.window.bordered(),
+			completion = cmp.config.window.bordered({
+				scrollbar = false,
+			}),
+			documentation = cmp.config.window.bordered({
+				scrollbar = false,
+			}),
 		},
 		mapping = cmp.mapping.preset.insert({
 			["<Tab>"] = cmp.mapping(function(callback)

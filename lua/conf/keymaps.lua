@@ -34,7 +34,7 @@ function M.Config()
 		{ mode = "n", key = "<leader>ca", map = ":CodeCompanionActions<CR>", enabled = true },
 		{
 			mode = "n",
-			key = "gd",
+			key = "<leader>gd",
 			map = function()
 				require("telescope.builtin").lsp_definitions()
 			end,
@@ -43,7 +43,7 @@ function M.Config()
 		},
 		{
 			mode = "n",
-			key = "gg",
+			key = "<leader>gg",
 			map = function()
 				require("telescope.builtin").lsp_references()
 			end,
@@ -52,7 +52,7 @@ function M.Config()
 		},
 		{
 			mode = "n",
-			key = "gi",
+			key = "<leader>gi",
 			map = function()
 				require("telescope.builtin").lsp_type_definitions()
 			end,

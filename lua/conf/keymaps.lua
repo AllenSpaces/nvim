@@ -39,14 +39,14 @@ function M.Config()
 				require("telescope.builtin").lsp_definitions()
 			end,
 			enabled = true,
-			opt,
+			desc = "Lsp Rumps Ro Refinition",
 		},
 		{
 			mode = "n",
 			key = "rn",
 			map = "<cmd>lua vim.lsp.buf.rename()<CR>",
 			enabled = true,
-			opt,
+			desc = "Cross File Renaming",
 		},
 		{
 			mode = "n",
@@ -55,12 +55,15 @@ function M.Config()
 				vim.diagnostic.open_float({ source = true, border = "rounded" })
 			end,
 			enabled = true,
-			opt,
+			desc = "Open Error Diagnosis Details",
 		},
 	}
 
 	for _, map in ipairs(mappings) do
 		if map.enabled then
+			if map.desc then
+				opt.desc = map.desc
+			end
 			keymap.set(map.mode, map.key, map.map, map.opt or opt)
 		end
 	end

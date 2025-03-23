@@ -9,6 +9,21 @@ end
 function M.Config()
 	super.setup({
 		method = "ssh",
+		ui = {
+			progress = {
+				icon = "",
+			},
+			manager = {
+				icon = {
+					check = "󱥾",
+				},
+			},
+		},
+		keymaps = {
+			install = "<leader>si",
+			remove = "<leader>sr",
+			update = "<leader>su",
+		},
 		install = {
 			packages = {
 				-- float terminal
@@ -86,23 +101,6 @@ function M.Config()
 				-- progress
 				"j-hui/fidget.nvim",
 			},
-		},
-
-		ui = {
-			progress = {
-				icon = "",
-			},
-			manager = {
-				icon = {
-					check = "󱥾",
-				},
-			},
-		},
-
-		keymaps = {
-			install = "<leader>si",
-			remove = "<leader>sr",
-			update = "<leader>su",
 		},
 	})
 end

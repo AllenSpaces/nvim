@@ -23,7 +23,7 @@ function M.Config()
 			java = { require("formatter.filetypes.java").clangformat },
 			lua = { require("formatter.filetypes.lua").stylua },
 			python = { require("formatter.filetypes.python").ruff },
-			markdown = { require("formatter.filetypes.markdown").prettier },
+			markdown = { require("formatter.filetypes.markdown").mdformat },
 			go = { require("formatter.filetypes.go").gofumpt },
 			bash = { require("formatter.filetypes.sh").shfmt },
 			sh = { require("formatter.filetypes.sh").shfmt },

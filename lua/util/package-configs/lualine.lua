@@ -74,19 +74,21 @@ function M.Config()
 					update_in_insert = true,
 					always_visible = true,
 				},
+			},
+			lualine_y = {
+				{ "datetime", style = "%Y˚%m˚%d | %H:%M:%S" },
+			},
+			lualine_z = {
 				{
 					"lsp-status",
 					show_count = false,
 					disabled_filetypes = { "NvimTree", "TelescopePrompt", "toggleterm", "codecompanion", "" },
 					icons = {
-						inactive = "󰌙",
+						active = "",
+						inactive = "",
 					},
 				},
 			},
-			lualine_y = {
-				{ "datetime", style = "%Y˚%m˚%d | %H:%M:%S" },
-			},
-			lualine_z = {},
 		},
 	})
 end

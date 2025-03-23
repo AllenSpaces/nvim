@@ -1,4 +1,4 @@
-[[TOC]]
+\[[TOC]\]
 
 # Neovim Configuration README
 
@@ -21,7 +21,7 @@
 
 2. **Install Plugins**:
    - The configuration uses a custom super - installer (`super-installer.lua`). Start Neovim, and the installer will automatically download and set up the necessary plugins.
-3. **Verify Installation**:
+1. **Verify Installation**:
    - Open Neovim and check for any error messages. If there are no errors, the installation is likely successful.
 
 ## Configuration Details

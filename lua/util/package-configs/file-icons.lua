@@ -62,6 +62,7 @@ function M.Config()
 			toml = { icon = "󰰥", color = "#ffd3aa", name = "Toml" },
 			lua = { icon = "󱨇", color = "#ebedcb", name = "Lua" },
 			vim = { icon = "", color = "#e0fdcd", name = "Vim" },
+			conf = { icon = "", color = "#bfdaff", name = "Config" },
 		},
 		override_by_filename = {
 			["tsconfig.json"] = { icon = "", color = "#ffc0b6", name = "TsConfig" },

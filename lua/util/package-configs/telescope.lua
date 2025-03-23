@@ -33,6 +33,7 @@ function M.Config()
 				},
 				live_grep_args = {},
 				treesitter_info = {},
+				node_packages = {},
 			},
 			sorting_strategy = "ascending",
 		},

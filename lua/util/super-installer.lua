@@ -56,6 +56,7 @@ function M.Config()
 				"nvim-telescope/telescope-project.nvim",
 				"nvim-telescope/telescope-live-grep-args.nvim",
 				"wukuohao2003/telescope-treesitter-info.nvim",
+				"wukuohao2003/telescope-node-packages.nvim",
 
 				-- smooth scroll
 				"psliwka/vim-smoothie",

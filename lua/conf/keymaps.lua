@@ -39,11 +39,29 @@ function M.Config()
 				require("telescope.builtin").lsp_definitions()
 			end,
 			enabled = true,
-			desc = "Lsp Rumps Ro Refinition",
+			desc = "Lsp Rumps Ro Defintions",
 		},
 		{
 			mode = "n",
-			key = "rn",
+			key = "gg",
+			map = function()
+				require("telescope.builtin").lsp_references()
+			end,
+			enabled = true,
+			desc = "Lsp Rumps Ro References",
+		},
+		{
+			mode = "n",
+			key = "gi",
+			map = function()
+				require("telescope.builtin").lsp_type_definitions()
+			end,
+			enabled = true,
+			desc = "Lsp Rumps Ro Type Defintions",
+		},
+		{
+			mode = "n",
+			key = "<leader>rn",
 			map = "<cmd>lua vim.lsp.buf.rename()<CR>",
 			enabled = true,
 			desc = "Cross File Renaming",

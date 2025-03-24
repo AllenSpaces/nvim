@@ -1,7 +1,7 @@
 local M = {}
 local group = vim.api.nvim_create_augroup("CodeCompanionFidgetHooks", {})
 
-function M.Commands()
+function M.Events()
 	local events = {
 		{
 			pattern = "CodeCompanionChatOpened",

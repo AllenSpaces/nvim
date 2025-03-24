@@ -33,9 +33,9 @@ local modules = {
 	{ moduleName = "lsp", enabled = true },
 	{ moduleName = "snips", enabled = true },
 	{ moduleName = "super-installer", enabled = true },
-	{ moduleName = "code-companion", enabled = true },
 	{ moduleName = "render-markdown", enabled = true },
 	{ moduleName = "snacks", enabled = true },
+	{ moduleName = "code-companion", enabled = true },
 }
 
 for _, util in ipairs(modules) do
@@ -43,11 +43,6 @@ for _, util in ipairs(modules) do
 	vim.opt.runtimepath:append(os.getenv("HOME") .. "/.super/package/*/after")
 	vim.opt.fillchars:append({ eob = " " })
 	if util.enabled then
-		local status, _ = pcall(require, getModulePath(util.moduleName))
-		if not status then
-			vim.notify("Failed to load module: " .. util.moduleName, vim.log.levels.ERROR, { title = "VimInit" })
-		else
-			require(getModulePath(util.moduleName)).Config()
-		end
+		require(getModulePath(util.moduleName)).Config()
 	end
 end

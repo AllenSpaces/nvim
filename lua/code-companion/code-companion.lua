@@ -83,11 +83,11 @@ function M.Config()
 				adapter = "deepseek",
 				keymaps = {
 					accept_change = {
-						modes = { n = "ga" },
+						modes = { n = "<leader>ga" },
 						description = "Accept the suggested change",
 					},
 					reject_change = {
-						modes = { n = "gr" },
+						modes = { n = "<leader>gr" },
 						description = "Reject the suggested change",
 					},
 				},
@@ -98,7 +98,7 @@ function M.Config()
 		},
 	})
 
-	require("code-companion.commands.event").Commands()
+	require("code-companion.commands.event").Events()
 end
 
 return M

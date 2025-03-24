@@ -12,6 +12,7 @@ function M.Config()
 			c = { icon = "", color = "#c0fbfd", name = "C" },
 			cpp = { icon = "", color = "#c0fbfd", name = "Cpp" },
 			cs = { icon = "", color = "#c0fbfd", name = "CSharp" },
+			out = { icon = "", color = "#ffa6a6", name = "Cout" },
 			py = { icon = "", color = "#f6f5bd", name = "Python" },
 			js = { icon = "", color = "#f6f5bd", name = "Js" },
 			ts = { icon = "", color = "#c0fbfd", name = "Ts" },

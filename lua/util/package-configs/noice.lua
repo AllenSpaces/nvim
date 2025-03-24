@@ -13,15 +13,15 @@ if not statis_notify then
 end
 
 function M.Config()
-	notify.setup({
-		background_colour = "#000000",
-		stages = "slide",
-		timeout = 1000,
-		render = "default",
-		max_width = "50",
-		fps = 120,
-		level = 1,
-	})
+	-- notify.setup({
+	-- 	background_colour = "#000000",
+	-- 	stages = "slide",
+	-- 	timeout = 1000,
+	-- 	render = "default",
+	-- 	max_width = "50",
+	-- 	fps = 120,
+	-- 	level = 1,
+	-- })
 
 	noice.setup({
 		cmdline = {

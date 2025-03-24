@@ -28,9 +28,6 @@ function M.Config()
 				"%.log",
 			},
 			extensions = {
-				project = {
-					sync_with_nvim_tree = true,
-				},
 				live_grep_args = {},
 				treesitter_info = {},
 				node_packages = {},

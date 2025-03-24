@@ -36,6 +36,7 @@ local modules = {
 	{ moduleName = "render-markdown", enabled = true },
 	{ moduleName = "snacks", enabled = true },
 	{ moduleName = "code-companion", enabled = true },
+	{ moduleName = "hop", enabled = true },
 }
 
 for _, util in ipairs(modules) do

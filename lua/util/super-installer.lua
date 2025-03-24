@@ -68,7 +68,6 @@ function M.Config()
 				-- telescope
 				"nvim-telescope/telescope.nvim",
 				"nvim-lua/plenary.nvim",
-				"nvim-telescope/telescope-project.nvim",
 				"nvim-telescope/telescope-live-grep-args.nvim",
 				"wukuohao2003/telescope-treesitter-info.nvim",
 				"wukuohao2003/telescope-node-packages.nvim",
@@ -100,6 +99,9 @@ function M.Config()
 
 				-- progress
 				"j-hui/fidget.nvim",
+
+				-- hop
+				"hadronized/hop.nvim",
 			},
 		},
 	})

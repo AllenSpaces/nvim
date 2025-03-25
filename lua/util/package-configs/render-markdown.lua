@@ -9,16 +9,20 @@ end
 function M.Config()
 	md_render.setup({
 		file_types = { "markdown", "codecompanion" },
+		bullet = {
+			highlight = "RenderMarkdownH2",
+			icons = { "●", "○", "◆", "◇" },
+		},
 		heading = {
 			position = "inline",
 			icons = { "󰉫 ", "󰉬 ", "󰉭 ", "󰉮 ", "󰉯 ", "󰉰 " },
 			backgrounds = {
-				"RenderMarkdownH1Bg",
-				"RenderMarkdownH2Bg",
-				"RenderMarkdownH3Bg",
-				"RenderMarkdownH4Bg",
-				"RenderMarkdownH5Bg",
-				"RenderMarkdownH6Bg",
+				"RenderMarkdownH1",
+				"RenderMarkdownH2",
+				"RenderMarkdownH3",
+				"RenderMarkdownH4",
+				"RenderMarkdownH5",
+				"RenderMarkdownH6",
 			},
 			foregrounds = {
 				"RenderMarkdownH1",
@@ -30,7 +34,7 @@ function M.Config()
 			},
 		},
 		quote = {
-			highlight = "DiffAdd",
+			highlight = "RenderMarkdownH2",
 		},
 		dash = { icon = "" },
 		code = {

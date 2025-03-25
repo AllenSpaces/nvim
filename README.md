@@ -63,8 +63,11 @@ local modules = {
 > Keybindings are set up to provide easy access to LSP features:
 
 - `gd`: Navigate to the definition of the symbol under the cursor.
+
 - `gD`: Navigate to the declaration of the symbol under the cursor.
+
 - `gi`: Show all implementations of the symbol under the cursor.
+
 - `gt`: Navigate to the type definition of the symbol under the cursor.
 
 ### 3. Language Server Protocol (LSP)

@@ -10,6 +10,7 @@ function M.Config()
 	snacks.setup({
 		image = {},
 		notifier = {
+			init_notify = false,
 			style = "compact",
 			icons = {
 				error = "󰬌 ",
@@ -38,7 +39,7 @@ function M.Config()
 						msg = ("%3d%% %s%s"):format(
 							value.kind == "end" and 100 or value.percentage or 100,
 							value.title or "",
-							value.message and (" **%s**"):format(value.message) or ""
+							value.message and (" **%s**"):format(value.message) or " "
 						),
 						done = value.kind == "end",
 					}

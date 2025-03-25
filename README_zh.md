@@ -70,7 +70,7 @@ local modules = {
 - **Python**：`pylsp` 带有自定义的代码风格设置。
 - **Java**：`jdtls` 用于 Java 开发。
 - **Bash**：`bashls` 用于 Bash 脚本编写。
-- **C/C++**：`clangd` 用于 C 和 C++ 代码。
+- **C/CPP**：`clangd` 用于 C 和 C++ 代码。
 - **Emmet**：`emmet_ls` 用于 HTML 和 CSS 缩写扩展。
 
 ### 4. 代码格式化 (`formatter.lua`)
@@ -106,7 +106,7 @@ local modules = {
 ## 故障排除
 
 - **插件安装错误**：检查 Neovim 的错误消息。确保你有稳定的网络连接，并且所有必要的依赖项都已安装。
-- ## **LSP 无法正常工作**：确保所需的语言服务器已安装并正确配置。你可以检查 `lsp/mason/conf` 目录中的特定 LSP 配置文件。
+- **LSP 无法正常工作**：确保所需的语言服务器已安装并正确配置。你可以检查 `lsp/mason/conf` 目录中的特定 LSP 配置文件。
 
 ## 贡献
 

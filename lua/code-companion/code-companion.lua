@@ -1,7 +1,7 @@
 local M = {}
 local status, AI = pcall(require, "codecompanion")
 local DeepSeekKey = os.getenv("DEEPSEEK_API_KEY")
-local prompt = require("code-companion.prompts.system.deepseek-r1").prompt
+local prompt = require("code-companion.prompts.system.deepseek-v3").prompt
 
 if not status then
 	vim.notify("codecompanion is not found ...", vim.log.levels.ERROR, { title = "Nvim" })
@@ -65,7 +65,7 @@ function M.Config()
 					},
 					schema = {
 						model = {
-							default = "deepseek-reasoner",
+							default = "deepseek-coder",
 						},
 					},
 				})
@@ -76,7 +76,7 @@ function M.Config()
 				adapter = "deepseek",
 				roles = {
 					user = " Wu Kuohao(Allen)",
-					llm = " DeepSeek-R1 Service",
+					llm = " DeepSeek-V3 Service",
 				},
 			},
 			inline = {

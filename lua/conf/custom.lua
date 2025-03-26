@@ -1,6 +1,10 @@
 local M = {}
 
 function M.Config()
+	vim.opt.runtimepath:append(os.getenv("HOME") .. "/.super/package/*")
+	vim.opt.runtimepath:append(os.getenv("HOME") .. "/.super/package/*/after")
+	vim.opt.fillchars:append({ eob = " " })
+
 	local custom = {
 		{ type = "global", method = "mapleader", value = " " },
 		{ type = "global", method = "loaded_netrw", value = 1 },

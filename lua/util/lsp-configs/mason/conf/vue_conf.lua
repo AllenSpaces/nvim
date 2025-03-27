@@ -7,15 +7,8 @@ function M.VueLSP()
 			vue = {
 				hybridMode = false,
 			},
-		},
-		settings = {
-			volar = {
-				templateInterpolationService = {
-					enable = true,
-				},
-				componentReferenceService = {
-					enable = true,
-				},
+			typescript = {
+				tsdk = "/Users/wukuohao/.volta/tools/image/packages/typescript/lib/node_modules/typescript/lib",
 			},
 		},
 	})

@@ -20,7 +20,6 @@ function M.Config()
 				"tail",
 			},
 			file_ignore_patterns = {
-				"node_modules",
 				".git",
 				".hg",
 				".DS_Store",

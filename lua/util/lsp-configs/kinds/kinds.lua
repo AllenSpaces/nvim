@@ -1,6 +1,6 @@
 local M = {}
 
-M.kinds = {
+M.Kinds = {
 	Text = "󱞎  ",
 	Class = "  ",
 	Function = "󰡱  ",
@@ -27,5 +27,7 @@ M.kinds = {
 	Operator = "  ",
 	TypeParameter = "󰴾  ",
 }
+
+M.DiagnosticSign = { Error = " ", Warn = " ", Hint = " ", Info = " " }
 
 return M

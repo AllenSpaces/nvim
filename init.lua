@@ -34,7 +34,7 @@ local modules = {
 	{ moduleName = "snips", enabled = true, opts = { lazy = true } },
 	{ moduleName = "super-installer", enabled = true, opts = { lazy = true } },
 	{ moduleName = "render-markdown", enabled = true, opts = { lazy = true } },
-	{ moduleName = "snacks", enabled = true },
+	{ moduleName = "snacks", enabled = true, opts = { lazy = true, delay = 100 } },
 	{ moduleName = "code-companion", enabled = true, opts = { lazy = true } },
 	{ moduleName = "hop", enabled = true, opts = { lazy = true } },
 }

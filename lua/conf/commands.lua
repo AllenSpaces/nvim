@@ -1,29 +1,20 @@
 local M = {}
-
-local function commandNotify(msg)
-	if msg ~= "" then
-		vim.notify(msg, vim.log.leventels.INFO, { title = "NvimCommands" })
-	else
-		return false
-	end
-end
+local progress = vim.defaulttable()
 
 function M.Config()
 	local commands = {
 		{
 			mode = { "InsertLeave", "TextChanged" },
 			pattern = { "*" },
-			callback = function(_, next)
+			callback = function(_)
 				vim.fn.execute("silent! write! | Format")
-				next()
 			end,
 			enable = true,
-			msg = "",
 		},
 		{
 			mode = { "VimEnter" },
 			pattern = { "*" },
-			callback = function(_, next)
+			callback = function(_)
 				vim.notify(vim.api.nvim_buf_get_name(0))
 				if vim.api.nvim_buf_get_name(0) == "" then
 					local ok, _ = pcall(vim.fn.execute, "Telescope find_files")
@@ -31,20 +22,16 @@ function M.Config()
 						vim.notify("Telescope is not available.", vim.log.leventels.WARN, { title = "NvimCommands" })
 					end
 				end
-				next()
 			end,
 			enable = true,
-			msg = "",
 		},
 	}
 	for _, cmd in ipairs(commands) do
 		if cmd.enable then
 			vim.api.nvim_create_autocmd(cmd.mode, {
-				pattern = cmd.pattern,
+				pattern = cmd.pattern or "",
 				callback = function(event)
-					cmd.callback(event, function()
-						commandNotify(cmd.msg)
-					end)
+					cmd.callback(event)
 				end,
 				nested = true,
 			})

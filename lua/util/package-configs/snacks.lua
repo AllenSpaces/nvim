@@ -2,7 +2,9 @@ local M = {}
 local status, snacks = pcall(require, "snacks")
 
 if not status then
-	vim.notify("snacks is not found ...", vim.log.leventels.ERROR, { title = "Nvim" })
+	M.Config = function()
+		vim.notify("snacks is not found ...", vim.log.leventels.ERROR, { title = "Nvim" })
+	end
 	return false
 end
 

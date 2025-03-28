@@ -2,7 +2,9 @@ local status, super = pcall(require, "super-installer")
 local M = {}
 
 if not status then
-	vim.notify("Super-Installer is not found...", vim.log.levels.ERROR, { title = "Nvim" })
+	M.Config = function()
+		vim.notify("Super-Installer is not found...", vim.log.levels.ERROR, { title = "Nvim" })
+	end
 	return
 end
 
@@ -20,11 +22,12 @@ function M.Config()
 			},
 		},
 		keymaps = {
-			install = "<leader>si",
-			remove = "<leader>sr",
-			update = "<leader>su",
+			install = "<leader>i",
+			remove = "<leader>r",
+			update = "<leader>u",
 		},
 		install = {
+			auto_download = false,
 			packages = {
 				-- float terminal
 				"akinsho/toggleterm.nvim",

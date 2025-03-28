@@ -2,7 +2,9 @@ local status, fmt = pcall(require, "formatter")
 local M = {}
 
 if not status then
-	vim.notify("formatter is no found ...", vim.log.levels.ERROR, { title = "Nvim" })
+	M.Config = function()
+		vim.notify("formatter is no found ...", vim.log.levels.ERROR, { title = "Nvim" })
+	end
 	return false
 end
 

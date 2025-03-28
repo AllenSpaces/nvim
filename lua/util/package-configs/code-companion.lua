@@ -4,7 +4,9 @@ local DeepSeekKey = os.getenv("DEEPSEEK_API_KEY")
 local prompt = require("util.code-companion.prompts.system.deepseek-v3").prompt
 
 if not status then
-	vim.notify("codecompanion is not found ...", vim.log.levels.ERROR, { title = "Nvim" })
+	M.Config = function()
+		vim.notify("codecompanion is not found ...", vim.log.levels.ERROR, { title = "Nvim" })
+	end
 	return false
 end
 
@@ -95,6 +97,8 @@ function M.Config()
 		},
 		prompt_library = {
 			["Explan Code"] = require("util.code-companion.prompts.action.explan-code").explan_code,
+			["Fix Code"] = require("util.code-companion.prompts.action.fix-code").fix_code,
+			["Optimize Code"] = require("util.code-companion.prompts.action.optimize-code").optimize_code,
 		},
 	})
 

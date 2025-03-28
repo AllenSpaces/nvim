@@ -2,7 +2,9 @@ local status, mason = pcall(require, "mason")
 local M = {}
 
 if not status then
-	vim.notify("mason is not found ...", vim.log.levels.ERROR, { title = "Nvim" })
+	M.Config = function()
+		vim.notify("mason is not found ...", vim.log.levels.ERROR, { title = "Nvim" })
+	end
 	return false
 end
 

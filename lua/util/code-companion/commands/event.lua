@@ -1,5 +1,5 @@
 local M = {}
-local group = vim.api.nvim_create_augroup("CodeCompanionFidgetHooks", {})
+local group = vim.api.nvim_create_augroup("CodeCompanionFidgetHooks", { clear = true })
 
 function M.Events()
 	local events = {

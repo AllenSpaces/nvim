@@ -2,15 +2,14 @@ local function getModulePath(moduleName)
 	local config_dir = vim.fn.stdpath("config")
 	local file_path = vim.fn.globpath(config_dir .. "/lua", "**/" .. moduleName .. ".lua", true)
 
-	if file_path ~= "" then
-		return string.gsub(
-			string.gsub(string.gsub(file_path, "^" .. config_dir .. "/lua/", ""), "/", "."),
-			"%.lua$",
-			""
-		)
-	else
+	if file_path == "" then
 		vim.notify("Undefined FileName: " .. moduleName, vim.log.levels.ERROR, { title = "Nvim" })
+		return nil
 	end
+
+	return file_path:gsub("^" .. config_dir .. "/lua/(.-)%.lua$", function(capture)
+		return capture:gsub("/", ".")
+	end)
 end
 
 local modules = {
@@ -32,21 +31,32 @@ local modules = {
 	{ moduleName = "mason", enabled = true, opts = { lazy = true } },
 	{ moduleName = "lsp", enabled = true, opts = { lazy = true } },
 	{ moduleName = "snips", enabled = true, opts = { lazy = true } },
-	{ moduleName = "super-installer", enabled = true, opts = { lazy = true } },
+	{ moduleName = "super-installer", enabled = true },
 	{ moduleName = "render-markdown", enabled = true, opts = { lazy = true } },
-	{ moduleName = "snacks", enabled = true, opts = { lazy = true, delay = 100 } },
+	{ moduleName = "snacks", enabled = true },
 	{ moduleName = "code-companion", enabled = true, opts = { lazy = true } },
 	{ moduleName = "hop", enabled = true, opts = { lazy = true } },
 }
 
 for _, util in ipairs(modules) do
-	if util.enabled then
-		if util.opts and util.opts.lazy then
-			vim.defer_fn(function()
-				require(getModulePath(util.moduleName)).Config()
-			end, util.opts.delay or 500)
-		else
-			require(getModulePath(util.moduleName)).Config()
-		end
+	if not util.enabled then
+		goto continue
 	end
+
+	local module_path = getModulePath(util.moduleName)
+	if not module_path then
+		goto continue
+	end
+
+	local config_fn = function()
+		require(module_path).Config()
+	end
+
+	if util.opts and util.opts.lazy then
+		vim.defer_fn(config_fn, util.opts.delay or 500)
+	else
+		config_fn()
+	end
+
+	::continue::
 end

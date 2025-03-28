@@ -2,7 +2,9 @@ local M = {}
 local status, ts = pcall(require, "nvim-treesitter.configs")
 
 if not status then
-	vim.notify("treesitter is not found ...", vim.log.levels.ERROR, { title = "Nvim" })
+	M.Config = function()
+		vim.notify("treesitter is not found ...", vim.log.levels.ERROR, { title = "Nvim" })
+	end
 	return false
 end
 
@@ -26,7 +28,7 @@ function M.Config()
 			enable = true,
 		},
 		rainbow = {
-			enable = true,
+			enable = false,
 			extended_mode = true,
 			colors = {
 				"#ffd6af",

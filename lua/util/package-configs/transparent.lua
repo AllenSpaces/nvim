@@ -2,7 +2,9 @@ local status, transparent = pcall(require, "transparent")
 local M = {}
 
 if not status then
-	vim.notify("Transparent is not undefined", vim.log.levels.ERROR, { title = "Nvim" })
+	M.Config = function()
+		vim.notify("Transparent is not undefined", vim.log.levels.ERROR, { title = "Nvim" })
+	end
 	return false
 end
 

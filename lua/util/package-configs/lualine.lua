@@ -2,7 +2,9 @@ local status, lul = pcall(require, "lualine")
 local M = {}
 
 if not status then
-	vim.notify("lualine is not found ...", vim.log.levels.ERROR, { title = "Nvim" })
+	M.Config = function()
+		vim.notify("lualine is not found ...", vim.log.levels.ERROR, { title = "Nvim" })
+	end
 	return false
 end
 
@@ -32,6 +34,10 @@ function M.Config()
 		tabline = {
 			lualine_a = {},
 			lualine_b = {
+				{
+					"filetype",
+					icon_only = false,
+				},
 				"branch",
 				"diff",
 				{
@@ -42,10 +48,6 @@ function M.Config()
 					symbols = {
 						unnamed = "",
 					},
-				},
-				{
-					"filetype",
-					icon = { align = "left" },
 				},
 			},
 			lualine_c = {
@@ -76,7 +78,7 @@ function M.Config()
 				},
 			},
 			lualine_y = {
-				{ "datetime", style = "%Y˚%m˚%d | %H:%M:%S" },
+				{ "datetime", style = "󰄉 %Y˚%m˚%d | %H:%M:%S" },
 			},
 			lualine_z = {
 				{

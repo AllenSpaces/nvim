@@ -10,8 +10,10 @@ local float_col = math.floor((screen_width - float_width) / 2)
 local float_row = math.floor((screen_height - float_height) / 2)
 
 if not status then
-	vim.notify("nvim-tree is not found ...", vim.log.levels.ERROR, { title = "Nvim" })
-	return
+	M.Config = function()
+		vim.notify("nvim-tree is not found ...", vim.log.levels.ERROR, { title = "Nvim" })
+	end
+	return false
 end
 
 function M.Config()

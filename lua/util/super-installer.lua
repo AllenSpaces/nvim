@@ -11,7 +11,7 @@ function M.Config()
 		method = "ssh",
 		ui = {
 			progress = {
-				icon = "",
+				icon = "",
 			},
 			manager = {
 				icon = {
@@ -50,7 +50,7 @@ function M.Config()
 				"nvim-tree/nvim-tree.lua",
 
 				-- color scheme
-				"wukuohao2003/miracle-of-god",
+				"AllenSpaces/miracle-of-god",
 
 				-- icons
 				"nvim-tree/nvim-web-devicons",
@@ -69,8 +69,8 @@ function M.Config()
 				"nvim-telescope/telescope.nvim",
 				"nvim-lua/plenary.nvim",
 				"nvim-telescope/telescope-live-grep-args.nvim",
-				"wukuohao2003/telescope-treesitter-info.nvim",
-				"wukuohao2003/telescope-node-packages.nvim",
+				"AllenSpaces/telescope-treesitter-info",
+				"AllenSpaces/telescope-node-packages.nvim",
 
 				-- smooth scroll
 				"psliwka/vim-smoothie",

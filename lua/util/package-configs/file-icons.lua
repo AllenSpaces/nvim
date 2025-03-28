@@ -79,6 +79,7 @@ function M.Config()
 			[".gitignore"] = { icon = "", color = "#ffc0b6", name = "GitIgnore" },
 			[".zshrc"] = { icon = "󰬡", color = "#e9fdfe", name = "Zshrc" },
 			["server.js"] = { icon = "󰒋", color = "#dae0ff", name = "Server" },
+			["tags"] = { icon = "", color = "#dae0ff", name = "Tag" },
 		},
 	})
 end

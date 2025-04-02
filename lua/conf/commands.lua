@@ -23,13 +23,13 @@ function M.Config()
 		},
 		{
 			mode = "LspProgress",
-			callback = function(ev)
+			callback = function(event)
 				local spinner = { "⠋", "⠙", "⠹", "⠸", "⠼", "⠴", "⠦", "⠧", "⠇", "⠏" }
 				vim.notify(vim.lsp.status(), vim.log.levels.INFO, {
 					id = "lsp_progress",
-					title = vim.bo.filetype,
+					title = vim.lsp.get_client_by_id(event.data.client_id).name,
 					opts = function(notif)
-						notif.icon = ev.data.params.value.kind == "end" and ""
+						notif.icon = event.data.params.value.kind == "end" and ""
 							or spinner[math.floor(vim.uv.hrtime() / (1e6 * 80)) % #spinner + 1]
 					end,
 				})

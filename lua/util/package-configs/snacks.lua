@@ -11,9 +11,12 @@ end
 function M.Config()
 	snacks.setup({
 		image = {},
+		input = {},
+		animate = {},
 		notifier = {
-			level = vim.log.levels.TRACE,
-			style = "compact",
+			history = {
+				minimal = true,
+			},
 			icons = {
 				error = "󰬌 ",
 				warn = "󰬞 ",

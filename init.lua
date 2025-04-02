@@ -12,6 +12,8 @@ local function getModulePath(moduleName)
 	end)
 end
 
+getModulePath("tree-sitter")
+
 local modules = {
 	{ moduleName = "commands", enabled = true },
 	{ moduleName = "keymaps", enabled = true, opts = { lazy = true } },

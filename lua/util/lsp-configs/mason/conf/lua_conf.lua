@@ -5,7 +5,7 @@ function M.LuaLSP()
 		on_init = function(client)
 			local path = client.workspace_folders[1].name
 			for _, filename in ipairs({ "/.luarc.json", "/.luarc.jsonc" }) do
-				if vim.loop.fs_stat(path .. filename) then
+				if vim.uv.fs_stat(path .. filename) then
 					return
 				end
 			end
@@ -18,12 +18,20 @@ function M.LuaLSP()
 					checkThirdParty = false,
 					library = {
 						vim.env.VIMRUNTIME,
+						vim.api.nvim_get_runtime_file("", true),
 					},
+				},
+				diagnostics = {
+					globals = { "vim" },
 				},
 			})
 		end,
 		settings = {
-			Lua = {},
+			Lua = {
+				telemetry = {
+					enable = false,
+				},
+			},
 		},
 	})
 end

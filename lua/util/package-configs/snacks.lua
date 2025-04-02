@@ -12,7 +12,7 @@ function M.Config()
 	snacks.setup({
 		image = {},
 		notifier = {
-			init_notify = false,
+			level = vim.log.levels.TRACE,
 			style = "compact",
 			icons = {
 				error = "󰬌 ",

@@ -28,6 +28,4 @@ M.Kinds = {
 	TypeParameter = "󰴾  ",
 }
 
-M.DiagnosticSign = { Error = " ", Warn = " ", Hint = " ", Info = " " }
-
 return M

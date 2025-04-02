@@ -84,7 +84,7 @@ function M.Config()
 				{
 					"lsp-status",
 					show_count = false,
-					disabled_filetypes = { "NvimTree", "TelescopePrompt", "toggleterm", "codecompanion", "" },
+					disabled_filetypes = { "mason", "NvimTree", "TelescopePrompt", "toggleterm", "codecompanion", "" },
 					icons = {
 						active = "",
 						inactive = "",

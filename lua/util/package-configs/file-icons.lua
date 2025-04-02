@@ -66,8 +66,10 @@ function M.Config()
 			lua = { icon = "󱨇", color = "#ebedcb", name = "Lua" },
 			vim = { icon = "", color = "#e0fdcd", name = "Vim" },
 			conf = { icon = "", color = "#bfdaff", name = "Config" },
+			rs = { icon = "", color = "#fad4bf", name = "Rust" },
 		},
 		override_by_filename = {
+			["readme.md"] = { icon = "󰯃", color = "#ebedcb", name = "Markdown" },
 			["tsconfig.json"] = { icon = "", color = "#ffc0b6", name = "TsConfig" },
 			[".env"] = { icon = "", color = "#f8e2ef", name = "Env" },
 			["favicon.ico"] = { icon = "󱞈", color = "#c0fbfd", name = "Favicon" },

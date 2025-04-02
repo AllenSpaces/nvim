@@ -25,7 +25,7 @@ function M.Config()
 			java = { require("formatter.filetypes.java").clangformat },
 			lua = { require("formatter.filetypes.lua").stylua },
 			python = { require("formatter.filetypes.python").ruff },
-			markdown = { require("formatter.filetypes.markdown").mdformat },
+			markdown = { require("formatter.filetypes.markdown").prettier },
 			go = { require("formatter.filetypes.go").gofumpt },
 			bash = { require("formatter.filetypes.sh").shfmt },
 			sh = { require("formatter.filetypes.sh").shfmt },
@@ -33,6 +33,7 @@ function M.Config()
 			cpp = { require("formatter.filetypes.cpp").clangformat },
 			cs = { require("formatter.filetypes.cs").clangformat },
 			dart = { require("formatter.filetypes.dart").dartformat },
+			rust = { require("formatter.filetypes.rust").rustfmt },
 		},
 	})
 end

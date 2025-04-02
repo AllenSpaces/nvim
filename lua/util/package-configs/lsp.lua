@@ -9,13 +9,20 @@ if not status then
 end
 
 local lsp_configure = require("util.lsp-configs.lsp-configure")
-local diagnostic_signs = require("util.lsp-configs.kinds.kinds").DiagnosticSign
 
 local function setup_diagnostic_signs()
-	for type, icon in pairs(diagnostic_signs) do
-		local hl = "DiagnosticSign" .. type
-		vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
-	end
+	vim.diagnostic.config({
+		virtual_text = true,
+		severity_sort = true,
+		signs = {
+			text = {
+				[vim.diagnostic.severity.ERROR] = " ",
+				[vim.diagnostic.severity.WARN] = " ",
+				[vim.diagnostic.severity.INFO] = " ",
+				[vim.diagnostic.severity.HINT] = " ",
+			},
+		},
+	})
 end
 
 local function setup_cmp()

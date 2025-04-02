@@ -11,6 +11,7 @@ function M.Config()
 		{ type = "global", method = "loaded_netrwPlugin", value = 1 },
 		{ type = "global", method = "db_ui_show_help", value = 0 },
 		{ type = "global", method = "termguicolors", value = true },
+		{ type = "global", method = "markdown_fenced_languages", value = { "ts=typescript", "js=javascript" } },
 		{ type = "option", method = "mouse", value = "" },
 		{ type = "option", method = "relativenumber", value = true },
 		{ type = "option", method = "number", value = true },

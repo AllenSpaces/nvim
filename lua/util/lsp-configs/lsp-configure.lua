@@ -36,7 +36,12 @@ M.LspWindow = {
 	completion = cmp.config.window.bordered({
 		scrollbar = false,
 	}),
+
 	documentation = cmp.config.window.bordered({
+		scrollbar = false,
+	}),
+
+	hover = cmp.config.window.bordered({
 		scrollbar = false,
 	}),
 }

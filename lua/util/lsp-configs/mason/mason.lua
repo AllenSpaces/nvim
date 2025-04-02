@@ -35,6 +35,7 @@ function M.Config()
 	require("util.lsp-configs.mason.conf.go_conf").GoLSP()
 	require("util.lsp-configs.mason.conf.vue_conf").VueLSP()
 	require("util.lsp-configs.mason.conf.bash_conf").BashLSP()
+	require("util.lsp-configs.mason.conf.rust_conf").RustLSP()
 end
 
 return M

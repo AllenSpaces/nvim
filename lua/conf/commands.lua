@@ -4,7 +4,6 @@ function M.Config()
 	local commands = {
 		{
 			mode = { "InsertLeave", "TextChanged" },
-			pattern = { "*" },
 			callback = function()
 				vim.fn.execute("silent! write! | Format")
 			end,
@@ -12,7 +11,6 @@ function M.Config()
 		},
 		{
 			mode = { "VimEnter" },
-			pattern = { "*" },
 			callback = function()
 				if vim.api.nvim_buf_get_name(0) == "" then
 					local ok, _ = pcall(vim.fn.execute, "Telescope find_files")
@@ -23,15 +21,28 @@ function M.Config()
 			end,
 			enable = true,
 		},
+		{
+			mode = "LspProgress",
+			callback = function(ev)
+				local spinner = { "⠋", "⠙", "⠹", "⠸", "⠼", "⠴", "⠦", "⠧", "⠇", "⠏" }
+				vim.notify(vim.lsp.status(), vim.log.levels.INFO, {
+					id = "lsp_progress",
+					title = vim.bo.filetype,
+					opts = function(notif)
+						notif.icon = ev.data.params.value.kind == "end" and ""
+							or spinner[math.floor(vim.uv.hrtime() / (1e6 * 80)) % #spinner + 1]
+					end,
+				})
+			end,
+			enable = true,
+		},
 	}
 	for _, cmd in ipairs(commands) do
 		if not cmd.enable then
 			goto continue
 		else
 			vim.api.nvim_create_autocmd(cmd.mode, {
-				pattern = cmd.pattern or "",
 				callback = cmd.callback,
-				nested = true,
 			})
 		end
 		::continue::

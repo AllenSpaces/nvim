@@ -69,7 +69,7 @@ function M.Config()
 			key = "fm",
 			leader = true,
 			map = ":Telescope notify<CR>",
-			enabled = true,
+			enabled = false,
 			desc = "Live grep",
 		},
 

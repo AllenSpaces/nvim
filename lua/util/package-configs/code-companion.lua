@@ -77,7 +77,7 @@ function M.Config()
 			chat = {
 				adapter = "deepseek",
 				roles = {
-					user = " Wu Kuohao(Allen)",
+					user = " Wu Kuohao 󱚝 [Allen] 󰅨",
 					llm = " DeepSeek-V3 Service",
 				},
 			},
@@ -101,8 +101,6 @@ function M.Config()
 			["Optimize Code"] = require("util.code-companion.prompts.action.optimize-code").optimize_code,
 		},
 	})
-
-	require("util.code-companion.commands.event").Events()
 end
 
 return M

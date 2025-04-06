@@ -35,9 +35,7 @@ function M.Config()
 				"RenderMarkdownH6",
 			},
 		},
-		quote = {
-			highlight = "RenderMarkdownH2",
-		},
+		quote = {},
 		dash = { icon = "" },
 		code = {
 			above = "",

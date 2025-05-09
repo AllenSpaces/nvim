@@ -67,7 +67,7 @@ function M.Config()
 					},
 					schema = {
 						model = {
-							default = "deepseek-coder",
+							default = "deepseek-reasoner",
 						},
 					},
 				})
